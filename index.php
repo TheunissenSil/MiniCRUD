@@ -8,7 +8,7 @@
     <title>MiniCRUD</title>
   </head>
   <body>
-    <header></header>
+    <header>Henk</header>
     <main>
       <div>
         <form action="uitkomst.php" method="post">

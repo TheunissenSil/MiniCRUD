@@ -1,5 +1,10 @@
-/* Main CSS */
+/* Colors 
+Background #530a0e
+Text color #ffffff
+Accent color #000000
 
+/*
+/* Main CSS */
 * {
   margin: 0;
   padding: 0;
@@ -9,4 +14,363 @@
   text-decoration: none;
   list-style: none;
   outline: none;
+}
+/* ------------- */
+/* Socials */
+.fa {
+  padding: 10px 0 10px 0;
+  font-size: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.fa-instagram,
+.fa-facebook,
+.fa-linkedin {
+  color: black;
+  transition: color ease 1s;
+}
+
+.fa-instagram:hover,
+.fa-facebook:hover,
+.fa-linkedin:hover {
+  color: #ec4444;
+  background: none;
+}
+/* ------------- */
+/* Header */
+header {
+  width: 100%;
+  background-color: #530a0e;
+  position: fixed;
+  z-index: 1000;
+  padding: 0;
+}
+
+.navagationbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#logo h2 {
+  display: block;
+  font-size: 24px;
+  text-transform: uppercase;
+  color: RGB(249, 249, 249);
+  font-weight: 600;
+  overflow: hidden;
+  border-right: 0.15em solid orange;
+  white-space: nowrap;
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+  margin-left: 25px;
+}
+
+@media only screen and (max-width: 550px) {
+  .navagationbar {
+    max-width: 95%;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  #logo h2 {
+    display: none;
+  }
+}
+
+/* Typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #ec4444;
+  }
+}
+
+.searchBar {
+  height: 44px;
+  border-radius: 4px;
+  font-size: 14px;
+  width: 400px;
+  padding: 5px 5px;
+  border: 1px solid;
+  margin: 0 25px 0 25px;
+}
+
+nav ul {
+  display: flex;
+}
+
+nav ul li a {
+  color: RGB(249, 249, 249);
+  font-size: 18px;
+  padding: 25px 20px;
+  display: inline-block;
+  transition: all 0.5s ease 0s;
+  margin: 0;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+  color: #ec4444;
+  box-shadow: inset 0 0 0 2em white;
+  border-color: black;
+}
+
+/* Dropdown Menu */
+.toggle-menu ul {
+  display: table;
+  width: 25px;
+}
+
+.toggle-menu ul li {
+  width: 100%;
+  height: 3px;
+  background-color: RGB(249, 249, 249);
+  margin-bottom: 4px;
+}
+
+input[type="checkbox"],
+label {
+  display: none;
+}
+
+@media only screen and (max-width: 980px) {
+  header {
+    padding: 20px 0px;
+  }
+
+  input[type="checkbox"] {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+    background: none;
+  }
+
+  label {
+    padding: 8px 0px;
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 25px;
+  }
+
+  input[type="checkbox"]:checked ~ nav {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    position: absolute;
+    right: 0px;
+    top: 77px;
+    background-color: #530a0e;
+    z-index: 99;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  nav ul li a {
+    color: #fff;
+    font-size: 15px;
+    padding: 10px 20px;
+    display: block;
+  }
+
+  nav ul li a i {
+    color: #ec4444;
+    padding-right: 13px;
+  }
+}
+/* ------------- */
+/* landingPage */
+#start {
+  width: 100%;
+  height: 100vh;
+  background: url("../Images/topimage-pizza-margherita-2021m05-800x533-1.jpg");
+  background-size: cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+#start:before {
+  content: "";
+  background: rgba(255, 255, 255, 0.8);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#start .landingPageInfo {
+  width: 50%;
+  height: 200px;
+  margin-left: 18%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  animation: 2s ease-out 0s 1 fromLeft;
+}
+
+@keyframes fromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+#start .landingPageInfo .pasFoto img {
+  width: 150px;
+  animation: morph 8s ease-in-out infinite 1s;
+  margin-left: 25px;
+  border: 5px solid black;
+}
+
+#start .landingPageInfo .landingPageText {
+  height: 100%;
+  margin-left: 20px;
+  margin-top: 50px;
+}
+
+@media only screen and (max-width: 930px) {
+  #start {
+    justify-content: center;
+  }
+
+  #start .landingPageInfo {
+    justify-content: center;
+    margin-left: 0;
+  }
+
+  #start .landingPageInfo .pasFoto {
+    display: none;
+  }
+
+  #start .landingPageInfo .landingPageText {
+    margin-left: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@keyframes morph {
+  0% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+
+  50% {
+    border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+  }
+
+  100% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+}
+
+.landingPageInfo .landingPageText h1 {
+  font-size: 64px;
+  color: black;
+}
+
+.landingPageInfo .landingPageText p {
+  font-size: 20px;
+}
+/* ------------- */
+/* About  */
+#pageAbout {
+  height: 15px;
+}
+
+.rowAbout {
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 100px 0 100px 0;
+}
+
+.rowAbout .columnAbout {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 45%;
+  padding: 15px;
+}
+
+@media only screen and (max-width: 950px) {
+  .rowAbout {
+    flex-direction: column;
+  }
+  .rowAbout .columnAbout {
+    width: 80%;
+  }
+}
+
+.rowAbout .imageBlock {
+  align-items: center;
+}
+
+.rowAbout .columnAbout .textLine {
+  height: 5px;
+  width: 100px;
+  background-color: #530a0e;
+}
+
+.rowAbout .columnAbout img {
+  width: 60%;
+}
+
+.rowAbout .columnAbout h2 {
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+
+.rowAbout .columnAbout p {
+  font-size: 20px;
+  margin-top: 30px;
+}
+/* ------------- */
+/* Foooter  */
+footer {
+  width: 100%;
+  height: 150px;
+  background-color: #530a0e;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer button {
+  background-color: #530a0e; /* Green */
+  border: 2px solid black;
+  padding: 5px 12px;
+  text-align: center;
+  font-size: 16px;
+  border-radius: 15px;
 }

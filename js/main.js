@@ -1,16 +1,18 @@
-const penisnaam = "barrie";
+backToTop = document.getElementById("backToTop");
 
-let penislengte = 25;
+window.onscroll = function () {
+  scrollFunction();
+};
 
-penislengte = 10;
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    backToTop.style.display = "block";
+  } else {
+    backToTop.style.display = "none";
+  }
+}
 
-console.log(
-  `De naam van uw penis is ${penisnaam} en de lengte van uw penis is ${penislengte} centimeter.`
-);
-
-const username = document.querySelector("#username");
-
-console.log(username);
-
-username.innerHTML = "jou moeder vriend";
-username.style.backgroundColor = "red";
+function backToTopFunction() {
+  document.body.scrollTop = 0; // Safari
+  document.documentElement.scrollTop = 0; // Chrome, firefox, Internet Explorer, Opera
+}

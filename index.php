@@ -32,6 +32,7 @@
             <li><a href="#pageProject">Galerie</a></li>
             <li><a href="#pageService">Reserveren</a></li>
             <li><a href="#pageContact">Contact</a></li>
+            <li><a href="#pageContact" class="fa fa-shopping-cart"></a></li>
           </ul>
         </nav>
       </section>

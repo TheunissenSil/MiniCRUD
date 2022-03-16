@@ -2,9 +2,11 @@
 Background #530a0e
 Text color #ffffff
 Accent color #000000
-
 /*
 /* Main CSS */
+.tijdelijk {
+  height: 1000px;
+}
 * {
   margin: 0;
   padding: 0;
@@ -14,6 +16,7 @@ Accent color #000000
   text-decoration: none;
   list-style: none;
   outline: none;
+  font-family: "Fredoka", sans-serif;
 }
 /* ------------- */
 /* Socials */
@@ -368,6 +371,41 @@ label {
 .rowAbout .columnAbout p {
   font-size: 20px;
   margin-top: 30px;
+}
+/* ------------- */
+/* Menu  */
+.menuPage {
+  height: 800px;
+  bottom: 50px;
+}
+
+.menuTitel {
+  font-size: 50px;
+  color: #45505b;
+  height: 75px;
+  position: relative;
+}
+
+.menuTitel::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 120px;
+  height: 1px;
+  background: #ddd;
+  bottom: 1px;
+  left: calc(50% - 60px);
+}
+
+.menuTitel::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: #ec4444;
+  bottom: 0;
+  left: calc(50% - 20px);
 }
 /* ------------- */
 /* Foooter  */

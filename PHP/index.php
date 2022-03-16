@@ -4,43 +4,22 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="stylesheet" href="../CSS/style.css" />
     <title>MiniCRUD</title>
   </head>
   <body>
-    <header>
-      <section class="navagationbar">
-        <a href="#start" id="logo" target="_blank"><h2>Pomodoro</h2></a>
+    <?php
+      include('../Includes/header.php');
+    ?>
 
-        <input class="searchBar" type="text" placeholder="Zoek een gerecht">
-
-        <label for="toggle-1" class="toggle-menu"
-          ><ul>
-            <li></li>
-            <li></li>
-            <li></li></ul
-        ></label>
-
-        <input type="checkbox" id="toggle-1" />
-
-        <nav>
-          <ul>
-            <li><a href="#start">Home</a></li>
-            <li><a href="#pageAbout">About</a></li>
-            <li><a href="Pages/menu.php">Menu</a></li>
-            <li><a href="#pageProject">Galerie</a></li>
-            <li><a href="#pageService">Reserveren</a></li>
-            <li><a href="#pageContact">Contact</a></li>
-            <li><a href="#pageContact" class="fa fa-shopping-cart"></a></li>
-          </ul>
-        </nav>
-      </section>
-    </header>
     <section id="start">
       <div class="landingPageInfo">
         <div class="pasFoto">
-          <img class="pasFotoImg" src="Images/logo.png" alt="Logo Pomodoro" />
+          <img class="pasFotoImg" src="../Images/logo.png" alt="Logo Pomodoro" />
         </div>
 
         <div class="landingPageText">
@@ -62,7 +41,7 @@
       <div id="pageAbout"></div>
       <div class="rowAbout">
         <div class="columnAbout imageBlock">
-          <img src="Images/tomato.png" alt="Tomaat foto">
+          <img src="../Images/tomato.png" alt="Tomaat foto">
         </div>
         <div class="columnAbout">
           <h2>Een uniek Italiaans restaurant in Lent, nabij Nijmegen</h2>
@@ -81,26 +60,14 @@
           </p>
         </div>
         <div class="columnAbout imageBlock">
-          <img src="Images/groupen.png" alt="">
+          <img src="../Images/groupen.png" alt="">
         </div>
       </div>
     </main>
-    <footer>
-      <div class="socialMediaLinks">
-        <a target=”_blank” href="https://www.instagram.com/osteria_pomodoro/" class="fa fa-instagram"></a>
-
-        <a target=”_blank” href="https://www.facebook.com/Osteria-Pomodoro-2184478194950467/" class="fa fa-facebook"></a>
-
-        <a target=”_blank” href="https://www.linkedin.com/company/pomodoro-group/about/" class="fa fa-linkedin"></a>
-      </div>
-
-      <div class="copyRight">
-        © Copyright <strong><span>siltheu</span></strong
-        >. All Rights Reserved
-      </div>
-
-      <button>Personeels paneel</button>
-    </footer>
+    
+    <?php
+      include('../Includes/footer.php');
+    ?>
     <script src="JS/main.js"></script>
   </body>
 </html>

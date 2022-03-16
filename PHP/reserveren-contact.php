@@ -13,8 +13,10 @@
       include('../Includes/header.php');
     ?>
 
-    <main>
-
+    <main class="mainPage">
+      <div class="container">
+        <p>test</p>
+      </div>
     </main>
 
     <?php

@@ -49,7 +49,7 @@
           <p>Of u nu op date gaat of met de hele familie komt eten; bij Italiaans restaurant Osteria Pomodoro nabij Nijmegen geniet u altijd van heerlijk eten. Ons restaurant is gevestigd in Lent, vlak bij Nijmegen, en hier kunt u heerlijke Italiaanse tapas eten. Met vermaak voor kinderen en tieners, goede wijn en heerlijk eten heeft iedereen het hier naar zijn of haar zin. Voor een vaste prijs bent u de hele avond onder de pannen. Voor kinderen van vier tot en met elf jaar betaalt u slechts € 1,- per levensjaar. Dat wordt dus kiezen uit Italiaanse klassiekers tot u niet meer kunt. Buon appetito!</p>
         </div>
       </div>
-      <div class="rowAbout">
+      <div class="rowAbout secondRowAbout">
         <div class="columnAbout">
           <h2>Een Italiaans restaurant nabij Nijmegen met authentieke tapas voor een vaste prijs</h2>
           <div class="textLine"></div>

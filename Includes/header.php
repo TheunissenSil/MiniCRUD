@@ -15,13 +15,55 @@
 
         <nav>
           <ul>
-            <li><a href="../PHP/index.php#start">Home</a></li>
-            <li><a href="../PHP/index.php#pageAbout">About</a></li>
-            <li><a href="../PHP/menu.php">Menu</a></li>
-            <li><a href="../PHP/galerie.php">Galerie</a></li>
-            <li><a href="../PHP/reserveren-contact.php#reserveren">Reserveren</a></li>
-            <li><a href="../PHP/reserveren-contact.php#contact">Contact</a></li>
-            <li><a href="../PHP/shoppingCart.php" class="fa fa-shopping-cart"></a></li>
+            <?php  
+              if (file_exists('index.php')) {
+                echo "<li><a href='index.php#start'>Home</a></li>";
+              } else {
+                echo "<li><a href='../index.php#start'>Home</a></li>";
+              }
+            ?>
+            <?php  
+               if (file_exists('index.php')) {
+                echo "<li><a href='index.php#pageAbout'>About</a></li>";
+              } else {
+                echo "<li><a href='../index.php#pageAbout'>About</a></li>";
+              }
+            ?>
+            <?php  
+              if (file_exists('index.php')) {
+                echo "<li><a href='PHP/menu.php'>Menu</a></li>";
+              } else {
+                echo "<li><a href='menu.php'>Menu</a></li>";
+              }
+            ?>
+            <?php                
+              if (file_exists('index.php')) {
+                echo "<li><a href='PHP/galerie.php'>Galerie</a></li>";
+              } else {
+                echo "<li><a href='galerie.php'>Galerie</a></li>";
+              }
+            ?>
+            <?php                
+              if (file_exists('index.php')) {
+                echo "<li><a href='PHP/reserveren-contact.php#reserveren'>Reserveren</a></li>";
+              } else {
+                echo "<li><a href='reserveren-contact.php#reserveren'>Reserveren</a></li>";
+              }
+            ?>
+            <?php                
+              if (file_exists('index.php')) {
+                echo "<li><a href='PHP/reserveren-contact.php#contact'>Contact</a></li>";
+              } else {
+                echo "<li><a href='reserveren-contact.php#contact'>Contact</a></li>";
+              }
+            ?>
+            <?php                
+              if (file_exists('index.php')) {
+                echo "<li><a href='PHP/shoppingCart.php' class='fa fa-shopping-cart'></a></li>";
+              } else {
+                echo "<li><a href='shoppingCart.php' class='fa fa-shopping-cart'></a></li>";
+              }
+            ?>
           </ul>
         </nav>
     </section>

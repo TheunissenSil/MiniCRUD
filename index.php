@@ -8,18 +8,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../CSS/style.css" />
+    <link rel="stylesheet" href="CSS/style.css" />
     <title>MiniCRUD</title>
   </head>
   <body>
     <?php
-      include('../Includes/header.php');
+      include('Includes/header.php');
     ?>
 
     <section id="start">
       <div class="landingPageInfo">
         <div class="pasFoto">
-          <img class="pasFotoImg" src="../Images/logo.png" alt="Logo Pomodoro" />
+          <img class="pasFotoImg" src="Images/logo.png" alt="Logo Pomodoro" />
         </div>
 
         <div class="landingPageText">
@@ -41,7 +41,7 @@
       <div id="pageAbout"></div>
       <div class="rowAbout">
         <div class="columnAbout imageBlock">
-          <img src="../Images/tomato.png" alt="Tomaat foto">
+          <img src="Images/tomato.png" alt="Tomaat foto">
         </div>
         <div class="columnAbout">
           <h2>Een uniek Italiaans restaurant in Lent, nabij Nijmegen</h2>
@@ -60,13 +60,13 @@
           </p>
         </div>
         <div class="columnAbout imageBlock">
-          <img src="../Images/groupen.png" alt="">
+          <img src="Images/groupen.png" alt="">
         </div>
       </div>
     </main>
     
     <?php
-      include('../Includes/footer.php');
+      include('Includes/footer.php');
     ?>
     <script src="JS/main.js"></script>
   </body>

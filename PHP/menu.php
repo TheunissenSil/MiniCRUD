@@ -53,8 +53,9 @@
               <h3>Margherita</h3>
               <p>marinarasaus, mozzarella, oregano</p>
             </div>
-            <div>
-            <button class="addToCart"><i class="fa fa-plus"></i><i class="fa fa-cart-plus"></i></button>
+            <div class="priceCart">
+              <h3>€6,99</h3>
+              <button class="addToCart"><i class="fa fa-plus"></i><i class="fa fa-cart-plus"></i></button>
             </div>
           </div>
           <div class="gerecht">
@@ -62,8 +63,9 @@
               <h3>Pollo</h3>
               <p>marinarasaus, kip, mozzarella, ui en paprika</p>
             </div>
-            <div>
-            <button class="addToCart"><i class="fa fa-plus"></i><i class="fa fa-cart-plus"></i></button>
+            <div class="priceCart">
+              <h3>€6,99</h3>
+              <button class="addToCart"><i class="fa fa-plus"></i><i class="fa fa-cart-plus"></i></button>
             </div>
           </div>
           <div class="gerecht">
@@ -71,8 +73,9 @@
               <h3>Salami</h3>
               <p>marinarasaus, mozzarella, oregano</p>
             </div>
-            <div>
-            <button class="addToCart"><i class="fa fa-plus"></i><i class="fa fa-cart-plus"></i></button>
+            <div class="priceCart">
+              <h3>€6,99</h3>
+              <button class="addToCart"><i class="fa fa-plus"></i><i class="fa fa-cart-plus"></i></button>
             </div>
           </div>
           <div class="gerecht">
@@ -80,8 +83,9 @@
               <h3>Tonno</h3>
               <p>marinarasaus, tonijn, rode ui, kappertjes, mozzarella</p>
             </div>
-            <div>
-            <button class="addToCart"><i class="fa fa-plus"></i><i class="fa fa-cart-plus"></i></button>
+            <div class="priceCart">
+              <h3>€6,99</h3>
+              <button class="addToCart"><i class="fa fa-plus"></i><i class="fa fa-cart-plus"></i></button>
             </div>
           </div>
           <div class="gerecht">
@@ -89,8 +93,9 @@
               <h3>Prosciutoo di Parma</h3>
               <p>marinarasaus, mozzarella, parmaham, rucola, parmezaan</p>
             </div>
-            <div>
-            <button class="addToCart"><i class="fa fa-plus"></i><i class="fa fa-cart-plus"></i></button>
+            <div class="priceCart">
+              <h3>€6,99</h3>
+              <button class="addToCart"><i class="fa fa-plus"></i><i class="fa fa-cart-plus"></i></button>
             </div>
           </div>
           <div class="gerecht">
@@ -98,8 +103,9 @@
               <h3>Funghi</h3>
               <p>marinarasaus, mozzarella, champignons</p>
             </div>
-            <div>
-            <button class="addToCart"><i class="fa fa-plus"></i><i class="fa fa-cart-plus"></i></button>
+            <div class="priceCart">
+              <h3>€6,99</h3>
+              <button class="addToCart"><i class="fa fa-plus"></i><i class="fa fa-cart-plus"></i></button>
             </div>
           </div>
           <div class="gerecht">
@@ -107,8 +113,9 @@
               <h3>Quatro Formaggi</h3>
               <p>marinarasaus, mozzarella, gorgonzola, parmezaan, tallegio</p>
             </div>
-            <div>
-            <button class="addToCart"><i class="fa fa-plus"></i><i class="fa fa-cart-plus"></i></button>
+            <div class="priceCart">
+              <h3>€6,99</h3>
+              <button class="addToCart"><i class="fa fa-plus"></i><i class="fa fa-cart-plus"></i></button>
             </div>
           </div>
           <div class="gerecht">
@@ -116,7 +123,8 @@
               <h3>Pomodoro</h3>
               <p>marinarasaus, mozzarella, panchetta, gekarameliseerde ui, gorgonzola</p>
             </div>
-            <div>
+            <div class="priceCart">
+              <h3>€6,99</h3>
               <button class="addToCart"><i class="fa fa-plus"></i><i class="fa fa-cart-plus"></i></button>
             </div>
           </div>

@@ -454,7 +454,48 @@ label {
   }
 }
 
-.containerMenu #pizzaMenu {
+.containerMenu .priceCart {
+  display: flex;
+  align-items: center;
+}
+
+.containerMenu .priceCart .priceTag {
+  margin: 0 15px 2.5px 15px;
+}
+
+.containerMenu .priceCart .addToCart {
+  background-color: #530a0e;
+  cursor: pointer;
+  color: white;
+  border: 2px solid black;
+  padding: 5px 10px 5px 10px;
+  transition: all 1.2s ease 0s;
+  display: flex;
+  margin-left: 5px;
+  border-radius: 15px;
+  margin-top: 2.5px;
+}
+
+.containerMenu .priceCart .addToCart .fa {
+  margin: 0;
+}
+
+.containerMenu .priceCart .addToCart .fa-plus {
+  margin-right: 10px;
+}
+
+.containerMenu .priceCart .addToCart i {
+  font-size: 25px;
+}
+
+.containerMenu .priceCart .addToCart:hover,
+.containerMenu .priceCart .addToCart:focus {
+  box-shadow: inset 0 0 0 2em #530a0e;
+  border-color: white;
+}
+
+.containerMenu #pizzaMenu,
+.containerMenu #pastaMenu {
   padding-top: 80px;
   height: auto;
   display: flex;
@@ -462,7 +503,7 @@ label {
   align-items: center;
 }
 
-.containerMenu #pizzaMenu .gerecht {
+.containerMenu .gerecht {
   background-color: #530a0e;
   width: 70%;
   height: auto;
@@ -474,53 +515,83 @@ label {
   align-items: center;
 }
 
-.containerMenu #pizzaMenu .gerecht p,
-.containerMenu #pizzaMenu .gerecht h3 {
+.containerMenu .gerecht p,
+.containerMenu .gerecht h3 {
   color: white;
   text-align: start;
 }
 
-.containerMenu #pizzaMenu .gerecht .priceCart {
+.containerMenu .drankMenu {
+  height: auto;
+  width: 100%;
   display: flex;
   align-items: center;
+  flex-direction: column;
+  padding-top: 80px;
 }
 
-.containerMenu #pizzaMenu .gerecht .priceCart .addToCart {
-  background-color: #530a0e;
-  cursor: pointer;
-  color: white;
-  border: 2px solid black;
-  padding: 5px 10px 5px 10px;
-  transition: all 1.2s ease 0s;
+.containerMenu .drankMenu .drankRow {
+  width: 70%;
+  height: auto;
+  margin: 50px 0 50px 0;
   display: flex;
-  margin-left: 25px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  column-gap: 50px;
 }
 
-.containerMenu #pizzaMenu .gerecht .priceCart .addToCart .fa {
-  margin: 0;
+.containerMenu .drankMenu .drankRow .drankColumn {
+  width: 40%;
+  background-color: #530a0e;
+  border-radius: 15px;
+  padding: 15px;
+  height: auto;
+  min-width: 400px;
 }
 
-.containerMenu #pizzaMenu .gerecht .priceCart .addToCart .fa-plus {
-  margin-right: 10px;
+.containerMenu .drankMenu .drankRow .drankColumn .drankTitel {
+  text-align: center;
+  color: white;
+  height: 10%;
 }
 
-.containerMenu #pizzaMenu .gerecht .priceCart .addToCart i {
-  font-size: 25px;
+.containerMenu .drankMenu .drankRow .drankColumn .drankjes {
+  display: flex;
+  height: 90%;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
-.containerMenu #pizzaMenu .gerecht .priceCart .addToCart:hover,
-.containerMenu #pizzaMenu .gerecht .priceCart .addToCart:focus {
-  box-shadow: inset 0 0 0 2em #530a0e;
-  border-color: white;
+.containerMenu .drankMenu .drankRow .drankColumn .drank {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  align-items: center;
+  margin: 7.5px 0 7.5px 0;
+  text-align: start;
 }
 
-@media only screen and (max-width: 1100px) {
-  .containerMenu #pizzaMenu .gerecht {
+@media only screen and (max-width: 1275px) {
+  .containerMenu .gerecht {
     width: 90%;
   }
-  .containerMenu #pizzaMenu .gerecht .priceCart .addToCart {
-    margin-right: 0;
-    margin-left: 5px;
+
+  .containerMenu .drankMenu .drankRow {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .containerMenu .priceCart {
+    flex-direction: column;
+  }
+
+  .containerMenu .priceCart .priceTag {
+    margin: 0 0 5px 0;
+  }
+
+  .containerMenu .drankMenu .drankRow {
+    justify-content: center;
   }
 }
 
@@ -534,13 +605,19 @@ footer {
   justify-content: space-evenly;
   flex-direction: column;
   align-items: center;
+  color: white;
+}
+
+footer .socialMediaLinks .footerSocials {
+  color: white;
 }
 
 footer button {
   background-color: #530a0e;
-  border: 2px solid black;
+  border: 2px solid white;
   padding: 5px 12px;
   text-align: center;
   font-size: 16px;
   border-radius: 15px;
+  color: white;
 }

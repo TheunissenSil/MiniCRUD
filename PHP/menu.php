@@ -18,8 +18,7 @@
 
     <main>
       <div class="container containerMenu">
-        <section>
-          <h2 class="titelStreepje">Menu</h2>
+          <h2 class="titelStreepje menuTitel">Menu</h2>
           <div class="menuNav">
             <a href="#pizzaMenu">Pizza's</a>
             <a href="#pastaMenu">Pasta's</a>
@@ -48,7 +47,6 @@
               </p>
             </div>
           </div>
-        </section>
         <div id="pizzaMenu">
           <h2 class="menuTitel subTitel">Pizza's</h2>
           <div class="gerecht">

@@ -34,15 +34,31 @@
 
                   <div class="datum-tijd">
                     <div class="personen-tijd form-element ">
-                      <input type="Number" class="form-input" placeholder="Personen" />
+                      <input type="Number" max="12" class="form-input" placeholder="Personen" />
                     </div>
 
                     <div class="datum form-element ">
-                      <input type="Date" class="form-input" placeholder="Datum" />
+                      <input id="datumForm" type="Date" class="form-input" placeholder="Datum" />
                     </div>
 
                     <div class="personen-tijd form-element ">
-                      <input type="time" class="form-input" placeholder="Tijd" />
+                      <select class="form-input">
+                        <option value="16:00">16:00</option>
+                        <option value="16:30">16:30</option>
+                        <option value="17:00">17:00</option>
+                        <option value="17:30">17:30</option>
+                        <option value="18:00">18:00</option>
+                        <option value="18:30">18:30</option>
+                        <option value="19:00">19:00</option>
+                        <option value="19:30">19:30</option>
+                        <option value="20:00">20:00</option>
+                        <option value="20:30">20:30</option>
+                        <option value="21:00">21:00</option>
+                        <option value="21:30">21:30</option>
+                        <option value="22:00">22:00</option>
+                        <option value="22:30">22:30</option>
+                        <option value="23:00">23:00</option>
+                      </select>
                     </div>
                   </div>
 
@@ -124,6 +140,6 @@
     <?php
       include('../Includes/footer.php');
     ?>
-    <script src="JS/main.js"></script>
+    <script src="../JS/main.js"></script>
   </body>
 </html>

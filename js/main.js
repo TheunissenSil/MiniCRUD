@@ -1,28 +1,29 @@
-/*backToTop = document.getElementById("backToTop");
-
+// Back to Top button
 window.onscroll = function () {
-  scrollFunction();
+  if (pageYOffset >= 200) {
+    document.getElementById("arrow").style.visibility = "visible";
+  } else {
+    document.getElementById("arrow").style.visibility = "hidden";
+  }
 };
 
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    backToTop.style.display = "block";
-  } else {
-    backToTop.style.display = "none";
-  }
+// Datum van vandaag
+let today = new Date();
+
+let month, day;
+
+if (today.getMonth() < 10) {
+  month = "0" + (today.getMonth() + 1);
+} else {
+  month = today.getMonth() + 1;
 }
 
-function backToTopFunction() {
-  document.body.scrollTop = 0; // Safari
-  document.documentElement.scrollTop = 0; // Chrome, firefox, Internet Explorer, Opera
-}*/
-
-function login() {
-  document.querySelector(".login").style.display = "block";
-  document.querySelector(".register").style.display = "none";
+if (today.getDate() < 10) {
+  day = "0" + today.getDate();
+} else {
+  day = today.getDate();
 }
 
-function register() {
-  document.querySelector(".login").style.display = "none";
-  document.querySelector(".register").style.display = "block";
-}
+let date = today.getFullYear() + "-" + month + "-" + today.getDate();
+
+document.querySelector("#datumForm").setAttribute("min", date);

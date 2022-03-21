@@ -12,5 +12,12 @@
         >. All Rights Reserved
     </div>
 
-    <button>Personeels paneel</button>
+    <?php                
+        if (file_exists('index.php')) {
+            echo "<a href='PHP/login-register.php'><button>Personeels paneel</button></a>";
+        } else {
+            echo "<a href='login-register.php'><button>Personeels paneel</button></a>";
+        }
+    ?>
+    
 </footer>

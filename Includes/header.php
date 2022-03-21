@@ -1,8 +1,14 @@
 <header>
       <section class="navagationbar">
-        <a href="../PHP/index.php#start" id="logo"><h2>Pomodoro</h2></a>
+        <?php  
+          if (file_exists('index.php')) {
+            echo "<a href='index.php#start' id='logo'><h2>Pomodoro</h2></a>";
+          } else {
+            echo "<a href='../index.php#start' id='logo'><h2>Pomodoro</h2></a>";
+          }
+        ?>
 
-        <input class="searchBar" type="text" placeholder="Zoek een gerecht">
+        <input class="searchBar" type="search" placeholder="Zoek een gerecht">
 
         <label for="toggle-1" class="toggle-menu"
           ><ul>
@@ -34,13 +40,6 @@
                 echo "<li><a href='PHP/menu.php'>Menu</a></li>";
               } else {
                 echo "<li><a href='menu.php'>Menu</a></li>";
-              }
-            ?>
-            <?php                
-              if (file_exists('index.php')) {
-                echo "<li><a href='PHP/galerie.php'>Galerie</a></li>";
-              } else {
-                echo "<li><a href='galerie.php'>Galerie</a></li>";
               }
             ?>
             <?php                

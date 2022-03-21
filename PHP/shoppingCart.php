@@ -13,9 +13,11 @@
       include('../Includes/header.php');
     ?>
 
-    <main class="mainPage">
+    <main>
       <div class="container">
-        <p>test</p>
+        <section>
+          <p><h2>Uw Winkelmandje is leeg</h2></p>
+        </section>
       </div>
     </main>
 

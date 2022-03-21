@@ -17,15 +17,10 @@ leuk
   font-family: "Fredoka", sans-serif;
 }
 
-.mainPage {
+.container {
   height: auto;
   width: 100%;
-  padding-top: 100px;
-}
-
-.mainPage .container {
-  height: auto;
-  width: 100%;
+  text-align: center;
 }
 /* ------------- */
 /* Socials */
@@ -39,8 +34,9 @@ leuk
 
 .fa-shopping-cart {
   width: 100%;
-  font-size: 21px;
+  font-size: 20px;
   border-radius: 0%;
+  height: 100%;
 }
 
 .fa-instagram,
@@ -320,23 +316,141 @@ label {
 .landingPageInfo .landingPageText p {
   font-size: 20px;
 }
-/* ------------- */
-/* About  */
+
 #pageAbout {
   height: 15px;
 }
 
-.rowAbout {
+/* ------------- */
+/* Login / Register */
+#start .loginRegisterContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+}
+
+#start .login-register {
+  width: 350px;
+  height: auto;
+  background-color: #530a0e;
+  border-radius: 15px;
+  padding: 15px;
+  text-align: center;
+  color: white;
+}
+
+#start .login {
+  display: block;
+}
+
+#start .register {
+  display: none;
+}
+
+#start .buttons {
+  width: 350px;
+  height: auto;
+  margin-top: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#start .buttons button {
+  cursor: pointer;
+  height: 44px;
+  font-size: 14px;
+  color: #fff;
+  background-color: #530a0e;
+  border-color: #530a0e;
+  border-radius: 15px;
+  width: 100px;
+}
+
+#start .login-register h2 {
+  font-size: 40px;
+  margin-bottom: 25px;
+}
+
+#start .login-register form {
+  width: 100%;
+}
+
+#start .login-register form h3 {
+  font-size: 20px;
+}
+
+#start .login-register form input {
+  height: 44px;
+  border-radius: 4px;
+  font-size: 14px;
+  width: 80%;
+  padding: 5px 5px;
+  border: 1px solid;
+  margin-top: 5px;
+  margin-bottom: 25px;
+}
+
+#start .login-register form .submitLogin-register {
+  cursor: pointer;
+  height: 44px;
+  font-size: 14px;
+  color: #fff;
+  background-color: #530a0e;
+  border-color: white;
+  border-radius: 15px;
+  width: 100px;
+}
+
+@media only screen and (max-width: 425px) {
+  #start .login-register {
+    width: 90%;
+  }
+
+  #start .buttons {
+    width: 90%;
+  }
+
+  #start .buttons button {
+    width: 28%;
+  }
+
+  #start .buttons a button {
+    width: 100%;
+  }
+}
+
+/* ------------- */
+/* Row Column layout  */
+.container section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.row {
   height: auto;
   width: 100%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
-  margin: 50px 0 50px 0;
+  row-gap: 100px;
+  margin: 150px 0 200px 0;
 }
 
-.rowAbout .columnAbout {
+.sectionRow {
+  margin: 25px 0 0 0;
+}
+
+.row .column {
   display: flex;
   flex-direction: column;
   height: auto;
@@ -345,48 +459,68 @@ label {
   text-align: start;
 }
 
-.rowAbout .imageBlock {
+.row .imageBlock {
   align-items: center;
 }
 
-@media only screen and (max-width: 1100px) {
-  .rowAbout {
-    flex-direction: column;
-  }
-
-  .rowAbout .columnAbout {
-    width: 80%;
-  }
-
-  .rowAbout .imageBlock {
-    width: 100%;
-    margin-bottom: 50px;
-    margin-top: 50px;
-  }
-
-  .secondRowAbout {
-    flex-direction: column-reverse;
-  }
+.row .menuImage {
+  display: block;
 }
 
-.rowAbout .columnAbout .textLine {
+.row .column .textLine {
   height: 5px;
   width: 100px;
   background-color: #530a0e;
 }
 
-.rowAbout .columnAbout img {
-  width: 60%;
+.row .column img {
+  width: 80%;
 }
 
-.rowAbout .columnAbout h2 {
-  font-size: 50px;
+.row .column .titleLine {
+  font-size: 40px;
   margin-bottom: 30px;
 }
 
-.rowAbout .columnAbout p {
+.row .column p {
   font-size: 20px;
   margin-top: 30px;
+}
+
+@media only screen and (max-width: 1100px) {
+  .container section {
+    height: auto;
+    padding-top: 100px;
+  }
+
+  .row {
+    flex-direction: column;
+    margin: 50px 0 100px 0;
+  }
+
+  .row .column {
+    width: 80%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .row .imageBlock {
+    width: 100%;
+    margin-bottom: 50px;
+    margin-top: 50px;
+  }
+
+  .row .menuImage {
+    display: none;
+  }
+
+  .row .column img {
+    width: 60%;
+  }
+
+  .reverseRow {
+    flex-direction: column-reverse;
+  }
 }
 /* ------------- */
 /* Menu  */
@@ -394,10 +528,11 @@ label {
   text-align: center;
 }
 
-.containerMenu .menuTitel {
+.titelStreepje {
   font-size: 50px;
   height: 65px;
   position: relative;
+  margin-top: 40px;
 }
 
 .containerMenu .subTitel {
@@ -406,7 +541,7 @@ label {
   position: relative;
 }
 
-.containerMenu .menuTitel::before {
+.titelStreepje::before {
   content: "";
   position: absolute;
   display: block;
@@ -417,7 +552,7 @@ label {
   left: calc(50% - 60px);
 }
 
-.containerMenu .menuTitel::after {
+.titelStreepje::after {
   content: "";
   position: absolute;
   display: block;
@@ -432,6 +567,7 @@ label {
   margin-top: 15px;
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 100%;
   margin-bottom: 80px;
 }
@@ -522,7 +658,7 @@ label {
   text-align: start;
 }
 
-.containerMenu .drankMenu {
+.containerMenu #drankMenu {
   height: auto;
   width: 100%;
   display: flex;
@@ -531,17 +667,18 @@ label {
   padding-top: 80px;
 }
 
-.containerMenu .drankMenu .drankRow {
+.containerMenu #drankMenu .drankRow {
   width: 70%;
   height: auto;
-  margin: 50px 0 50px 0;
+  margin: 25px 0 25px 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap;
   column-gap: 50px;
+  row-gap: 50px;
 }
 
-.containerMenu .drankMenu .drankRow .drankColumn {
+.containerMenu #drankMenu .drankRow .drankColumn {
   width: 40%;
   background-color: #530a0e;
   border-radius: 15px;
@@ -550,20 +687,20 @@ label {
   min-width: 400px;
 }
 
-.containerMenu .drankMenu .drankRow .drankColumn .drankTitel {
+.containerMenu #drankMenu .drankRow .drankColumn .drankTitel {
   text-align: center;
   color: white;
   height: 10%;
 }
 
-.containerMenu .drankMenu .drankRow .drankColumn .drankjes {
+.containerMenu #drankMenu .drankRow .drankColumn .drankjes {
   display: flex;
   height: 90%;
   flex-direction: column;
   justify-content: space-evenly;
 }
 
-.containerMenu .drankMenu .drankRow .drankColumn .drank {
+.containerMenu #drankMenu .drankRow .drankColumn .drank {
   display: flex;
   justify-content: space-between;
   color: white;
@@ -577,7 +714,7 @@ label {
     width: 90%;
   }
 
-  .containerMenu .drankMenu .drankRow {
+  .containerMenu #drankMenu .drankRow {
     width: 90%;
   }
 }
@@ -591,8 +728,9 @@ label {
     margin: 0 0 5px 0;
   }
 
-  .containerMenu .drankMenu .drankRow {
-    justify-content: center;
+  .containerMenu #drankMenu .drankRow .drankColumn {
+    width: 90%;
+    min-width: 0;
   }
 }
 
@@ -610,6 +748,96 @@ label {
   }
 }
 
+/* ------------- */
+/* Formulieren  */
+.contact-reserveren {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.contact-reserveren .titel {
+  font-size: 30px;
+  margin-bottom: 25px;
+}
+
+.contact-reserveren .contact-form,
+.contact-reserveren .reserveren-form {
+  width: 100%;
+}
+
+.contact-reserveren .naam-email,
+.contact-reserveren .datum-tijd {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-reserveren .form-element {
+  padding-bottom: 15px;
+}
+
+.contact-reserveren .form-element textarea {
+  overflow: auto;
+  resize: vertical;
+  width: 100%;
+}
+
+.contact-reserveren .form-element .form-input {
+  height: 44px;
+  border-radius: 4px;
+  font-size: 14px;
+  width: 100%;
+  padding: 5px 5px;
+  border: 1px solid;
+}
+
+.contact-reserveren .datum {
+  width: 48%;
+}
+
+.contact-reserveren .personen-tijd {
+  width: 25%;
+}
+
+.contact-reserveren .naam-email .form-element {
+  width: 48%;
+}
+
+.contact-reserveren .form-submit {
+  text-align: center;
+}
+
+.contact-reserveren .form-submit .submit-button {
+  cursor: pointer;
+  height: 44px;
+  font-size: 14px;
+  color: #fff;
+  background-color: #ec4444;
+  border-color: #ec4444;
+  border-radius: 15px;
+  width: 100px;
+}
+
+@media only screen and (max-width: 500px) {
+  .contact-reserveren .naam-email,
+  .contact-reserveren .datum-tijd {
+    flex-direction: column;
+  }
+
+  .contact-reserveren .naam-email .form-element,
+  .contact-reserveren .datum-tijd .form-element {
+    width: 100%;
+  }
+
+  .contact-reserveren .datum {
+    width: 100%;
+  }
+
+  .contact-reserveren .personen-tijd {
+    width: 100%;
+  }
+}
 /* ------------- */
 /* Foooter  */
 footer {
@@ -635,4 +863,6 @@ footer button {
   font-size: 16px;
   border-radius: 15px;
   color: white;
+  cursor: pointer;
+  margin-top: 14px;
 }

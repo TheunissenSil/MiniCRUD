@@ -74,196 +74,34 @@
             </div>
             <div class="drankColumn">
               <div class="drankTitel">
-                <h2>Frisdranken</h2>
+                <h2>Warme Drankjes</h2>
               </div>
               <div class="drankjes">
-                <div class="drank">
-                  <h3>Chaudfontaine Blauw of Rood</h3>
-                  <div class="priceCart priceCartDrank">
-                    <h3 class="priceTag">€1,50</h3>
-                    <button class="addToCart">
-                      <i class="fa fa-plus"></i><i class="fa fa-cart-plus"></i>
-                    </button>
-                  </div>
-                </div>
-                <div class="drank">
-                  <h3>Coca-Cola (Zero)</h3>
-                  <div class="priceCart priceCartDrank">
-                    <h3 class="priceTag">€1,50</h3>
-                    <button class="addToCart">
-                      <i class="fa fa-plus"></i><i class="fa fa-cart-plus"></i>
-                    </button>
-                  </div>
-                </div>
-                <div class="drank">
-                  <h3>Sprite</h3>
-                  <div class="priceCart priceCartDrank">
-                    <h3 class="priceTag">€1,50</h3>
-                    <button class="addToCart">
-                      <i class="fa fa-plus"></i><i class="fa fa-cart-plus"></i>
-                    </button>
-                  </div>
-                </div>
-                <div class="drank">
-                  <h3>Fanta Orange</h3>
-                  <div class="priceCart priceCartDrank">
-                    <h3 class="priceTag">€1,50</h3>
-                    <button class="addToCart">
-                      <i class="fa fa-plus"></i><i class="fa fa-cart-plus"></i>
-                    </button>
-                  </div>
-                </div>
-                <div class="drank">
-                  <h3>Fanta Cassis</h3>
-                  <div class="priceCart priceCartDrank">
-                    <h3 class="priceTag">€1,75</h3>
-                    <button class="addToCart">
-                      <i class="fa fa-plus"></i><i class="fa fa-cart-plus"></i>
-                    </button>
-                  </div>
-                </div>
-                <div class="drank">
-                  <h3>Fanta Cassis</h3>
-                  <div class="priceCart priceCartDrank">
-                    <h3 class="priceTag">€1,75</h3>
-                    <button class="addToCart">
-                      <i class="fa fa-plus"></i><i class="fa fa-cart-plus"></i>
-                    </button>
-                  </div>
-                </div>
-                <div class="drank">
-                  <h3>Fanta Cassis</h3>
-                  <div class="priceCart priceCartDrank">
-                    <h3 class="priceTag">€1,75</h3>
-                    <button class="addToCart">
-                      <i class="fa fa-plus"></i><i class="fa fa-cart-plus"></i>
-                    </button>
-                  </div>
-                </div>
+                <?php 
+                  include('../Includes/menu/warmeDranken.php');
+                ?>
               </div>
             </div>
           </div>
           <div class="drankRow">
             <div class="drankColumn">
               <div class="drankTitel">
-                <h2>Frisdranken</h2>
+                <h2>Wijnkaart</h2>
               </div>
               <div class="drankjes">
-                <div class="drank">
-                  <h3>Chaudfontaine Blauw of Rood</h3>
-                  <div class="priceCart priceCartDrank">
-                    <h3 class="priceTag">€1,50</h3>
-                    <button class="addToCart">
-                      <i class="fa fa-plus"></i><i class="fa fa-cart-plus"></i>
-                    </button>
-                  </div>
-                </div>
-                <div class="drank">
-                  <h3>Coca-Cola (Zero)</h3>
-                  <div class="priceCart priceCartDrank">
-                    <h3 class="priceTag">€1,50</h3>
-                    <button class="addToCart">
-                      <i class="fa fa-plus"></i><i class="fa fa-cart-plus"></i>
-                    </button>
-                  </div>
-                </div>
-                <div class="drank">
-                  <h3>Sprite</h3>
-                  <div class="priceCart priceCartDrank">
-                    <h3 class="priceTag">€1,50</h3>
-                    <button class="addToCart">
-                      <i class="fa fa-plus"></i><i class="fa fa-cart-plus"></i>
-                    </button>
-                  </div>
-                </div>
-                <div class="drank">
-                  <h3>Fanta Orange</h3>
-                  <div class="priceCart priceCartDrank">
-                    <h3 class="priceTag">€1,50</h3>
-                    <button class="addToCart">
-                      <i class="fa fa-plus"></i><i class="fa fa-cart-plus"></i>
-                    </button>
-                  </div>
-                </div>
-                <div class="drank">
-                  <h3>Fanta Cassis</h3>
-                  <div class="priceCart priceCartDrank">
-                    <h3 class="priceTag">€1,75</h3>
-                    <button class="addToCart">
-                      <i class="fa fa-plus"></i><i class="fa fa-cart-plus"></i>
-                    </button>
-                  </div>
-                </div>
-                <div class="drank">
-                  <h3>Fanta Cassis</h3>
-                  <div class="priceCart priceCartDrank">
-                    <h3 class="priceTag">€1,75</h3>
-                    <button class="addToCart">
-                      <i class="fa fa-plus"></i><i class="fa fa-cart-plus"></i>
-                    </button>
-                  </div>
-                </div>
-                <div class="drank">
-                  <h3>Fanta Cassis</h3>
-                  <div class="priceCart priceCartDrank">
-                    <h3 class="priceTag">€1,75</h3>
-                    <button class="addToCart">
-                      <i class="fa fa-plus"></i><i class="fa fa-cart-plus"></i>
-                    </button>
-                  </div>
-                </div>
+                <?php 
+                  include('../Includes/menu/wijnKaart.php');
+                ?>
               </div>
             </div>
             <div class="drankColumn">
               <div class="drankTitel">
-                <h2>Frisdranken</h2>
+                <h2>Bierkaart</h2>
               </div>
               <div class="drankjes">
-                <div class="drank">
-                  <h3>Chaudfontaine Blauw of Rood</h3>
-                  <div class="priceCart priceCartDrank">
-                    <h3 class="priceTag">€1,50</h3>
-                    <button class="addToCart">
-                      <i class="fa fa-plus"></i><i class="fa fa-cart-plus"></i>
-                    </button>
-                  </div>
-                </div>
-                <div class="drank">
-                  <h3>Coca-Cola (Zero)</h3>
-                  <div class="priceCart priceCartDrank">
-                    <h3 class="priceTag">€1,50</h3>
-                    <button class="addToCart">
-                      <i class="fa fa-plus"></i><i class="fa fa-cart-plus"></i>
-                    </button>
-                  </div>
-                </div>
-                <div class="drank">
-                  <h3>Sprite</h3>
-                  <div class="priceCart priceCartDrank">
-                    <h3 class="priceTag">€1,50</h3>
-                    <button class="addToCart">
-                      <i class="fa fa-plus"></i><i class="fa fa-cart-plus"></i>
-                    </button>
-                  </div>
-                </div>
-                <div class="drank">
-                  <h3>Fanta Orange</h3>
-                  <div class="priceCart priceCartDrank">
-                    <h3 class="priceTag">€1,50</h3>
-                    <button class="addToCart">
-                      <i class="fa fa-plus"></i><i class="fa fa-cart-plus"></i>
-                    </button>
-                  </div>
-                </div>
-                <div class="drank">
-                  <h3>Fanta Cassis</h3>
-                  <div class="priceCart priceCartDrank">
-                    <h3 class="priceTag">€1,75</h3>
-                    <button class="addToCart">
-                      <i class="fa fa-plus"></i><i class="fa fa-cart-plus"></i>
-                    </button>
-                  </div>
-                </div>
+                <?php 
+                  include('../Includes/menu/Bierkaart.php');
+                ?>
               </div>
             </div>
           </div>

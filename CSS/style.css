@@ -899,9 +899,9 @@ footer button,
   row-gap: 50px;
 }
 
-.adminMain .adminColumn {
+.adminMain .adminRow .adminColumn {
   height: auto;
-  width: 40%;
+  width: 47.5%;
   text-align: center;
   display: flex;
   align-items: center;
@@ -909,19 +909,128 @@ footer button,
   justify-content: center;
 }
 
-.adminColumn .adminLine {
+.adminMain .adminRow .adminColumn .adminLine {
   height: 5px;
   width: 100px;
   background-color: orange;
 }
 
-.registreer {
+.adminMain .adminRow .adminColumn .registreer {
   width: 450px;
   background-color: orange;
 }
 
-.registreer form .submitLogin-register {
+.adminMain .adminRow .adminColumn .registreer form .submitLogin-register {
   background-color: orange;
+}
+
+.tableMain {
+  height: auto;
+  padding-top: 100px;
+}
+
+.adminMain .tableRow {
+  flex-direction: column;
+  align-items: center;
+  row-gap: 0;
+  overflow-x: auto;
+}
+
+.adminMain .tableRow div {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.adminMain .tableRow div h2 {
+  font-size: 30px;
+}
+
+.adminMain .tableRow div button {
+  cursor: pointer;
+  margin: 15px 0 15px 0;
+  height: 40px;
+  font-size: 14px;
+  color: #fff;
+  background-color: orange;
+  border-color: orange;
+  border-radius: 15px;
+  width: 140px;
+}
+
+.adminMain .adminRow table {
+  width: 80%;
+  margin-bottom: 100px;
+  min-width: 1000px;
+}
+
+.adminMain .tableRow table button {
+  cursor: pointer;
+  height: 30px;
+  font-size: 14px;
+  color: #fff;
+  background-color: orange;
+  border-color: orange;
+  border-radius: 15px;
+  width: 80%;
+}
+
+.adminMain .tableRow table .delete {
+  background-color: red;
+  border-color: red;
+}
+
+.adminMain .adminRow table td,
+.adminMain .adminRow table th {
+  text-align: left;
+  padding: 8px;
+}
+
+.adminMain .adminRow table .changeDelButton {
+  text-align: center;
+}
+
+.adminMain .adminRow table .gerechtNaam {
+  width: 25%;
+}
+
+.adminMain .adminRow table .gerechtBeschrijving {
+  width: 35%;
+}
+
+.adminMain .adminRow table .gerechtCatagorie {
+  width: 12.5%;
+}
+
+.adminMain .adminRow table .gerechtPrijs {
+  width: 7.5%;
+}
+
+.adminMain .adminRow table .drankNaam {
+  width: 30%;
+}
+
+.adminMain .adminRow table .drankCatagorie {
+  width: 30%;
+}
+
+.adminMain .adminRow table .drankPrijs {
+  width: 20%;
+}
+
+.adminMain .adminRow table .gerechtChange,
+.adminMain .adminRow table .gerechtDelete {
+  width: 10%;
+}
+
+.adminMain .adminRow table th {
+  background-color: orange;
+  color: white;
+}
+
+.adminMain .adminRow table tr:nth-child(even) {
+  background-color: #dddddd;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -930,19 +1039,21 @@ footer button,
     align-items: center;
   }
 
-  .adminMain .adminColumn {
+  .adminMain .adminRow .adminColumn {
     width: 80%;
   }
 
   .adminMain {
     height: auto;
   }
+  .adminMain .tableRow {
+    display: block;
+  }
 }
 
 @media only screen and (max-width: 600px) {
-  .registreer {
-    width: 90%;
-    background-color: orange;
+  .adminMain .adminRow .adminColumn .registreer {
+    width: 100%;
   }
 }
 /* ------------- */

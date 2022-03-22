@@ -23,8 +23,7 @@
           <ul>
             <li><a href='home.php'>Home</a></li>
             <li><a href='changeMenu.php'>Menukaart aanpassen</a></li>
-            <li><a href='reserveringen.php'>Reserveringen</a></li>
-            <li><a href='contactMessages.php'>Contact Berichten</a></li>
+            <li><a href='adminReserveringen-contact.php'>Reserveringen / Contact berichten</a></li>
             <li><a href='../PHP/logout.php'>Uitloggen</a></li>
           </ul>
         </nav>

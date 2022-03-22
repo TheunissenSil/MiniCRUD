@@ -37,28 +37,28 @@
             ?>
             <?php  
               if (file_exists('index.php')) {
-                echo "<li><a href='PHP/menu.php'>Menu</a></li>";
+                echo "<li><a href='Pages/menu.php'>Menu</a></li>";
               } else {
                 echo "<li><a href='menu.php'>Menu</a></li>";
               }
             ?>
             <?php                
               if (file_exists('index.php')) {
-                echo "<li><a href='PHP/reserveren-contact.php#reserveren'>Reserveren</a></li>";
+                echo "<li><a href='Pages/reserveren-contact.php#reserveren'>Reserveren</a></li>";
               } else {
                 echo "<li><a href='reserveren-contact.php#reserveren'>Reserveren</a></li>";
               }
             ?>
             <?php                
               if (file_exists('index.php')) {
-                echo "<li><a href='PHP/reserveren-contact.php#contact'>Contact</a></li>";
+                echo "<li><a href='Pages/reserveren-contact.php#contact'>Contact</a></li>";
               } else {
                 echo "<li><a href='reserveren-contact.php#contact'>Contact</a></li>";
               }
             ?>
             <?php                
               if (file_exists('index.php')) {
-                echo "<li><a href='PHP/shoppingCart.php' class='fa fa-shopping-cart'></a></li>";
+                echo "<li><a href='Pages/shoppingCart.php' class='fa fa-shopping-cart'></a></li>";
               } else {
                 echo "<li><a href='shoppingCart.php' class='fa fa-shopping-cart'></a></li>";
               }

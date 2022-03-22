@@ -168,7 +168,7 @@ label {
   display: none;
 }
 
-@media only screen and (max-width: 1100px) {
+@media only screen and (max-width: 1200px) {
   header {
     padding: 20px 0px;
   }
@@ -323,7 +323,7 @@ label {
 
 /* ------------- */
 /* Login / Register */
-#start .loginRegisterContainer {
+.loginRegisterContainer {
   width: 100%;
   height: 100%;
   display: flex;
@@ -333,7 +333,7 @@ label {
   position: absolute;
 }
 
-#start .login-register {
+.login-register {
   width: 350px;
   height: auto;
   background-color: #530a0e;
@@ -343,7 +343,7 @@ label {
   color: white;
 }
 
-#start .buttons {
+.buttons {
   width: 350px;
   height: auto;
   margin-top: 25px;
@@ -352,7 +352,7 @@ label {
   justify-content: center;
 }
 
-#start .buttons button {
+.buttons button {
   cursor: pointer;
   height: 44px;
   font-size: 14px;
@@ -363,20 +363,24 @@ label {
   width: 150px;
 }
 
-#start .login-register h2 {
+.login-register h2 {
   font-size: 40px;
   margin-bottom: 25px;
 }
 
-#start .login-register form {
+.login-register form {
   width: 100%;
 }
 
-#start .login-register form h3 {
+.login-register form .error {
+  margin-bottom: 25px;
+}
+
+.login-register form h3 {
   font-size: 20px;
 }
 
-#start .login-register form input {
+.login-register form input {
   height: 44px;
   border-radius: 4px;
   font-size: 14px;
@@ -387,7 +391,7 @@ label {
   margin-bottom: 25px;
 }
 
-#start .login-register form .submitLogin-register {
+.login-register form .submitLogin-register {
   cursor: pointer;
   height: 44px;
   font-size: 14px;
@@ -399,7 +403,7 @@ label {
 }
 
 @media only screen and (max-width: 425px) {
-  #start .login-register {
+  .login-register {
     width: 90%;
   }
 }
@@ -447,7 +451,8 @@ label {
   display: block;
 }
 
-.row .column .textLine {
+.row .column .textLine,
+.adminRow .adminColumn .textLine {
   height: 5px;
   width: 100px;
   background-color: #530a0e;
@@ -457,12 +462,14 @@ label {
   width: 80%;
 }
 
-.row .column .titleLine {
+.row .column .titleLine,
+.adminRow .adminColumn .titleLine {
   font-size: 40px;
   margin-bottom: 30px;
 }
 
-.row .column p {
+.row .column p,
+.adminRow .adminColumn p {
   font-size: 20px;
   margin-top: 30px;
 }
@@ -822,7 +829,8 @@ label {
 }
 /* ------------- */
 /* Foooter  */
-footer {
+footer,
+.adminFooter {
   width: 100%;
   height: 150px;
   background-color: #530a0e;
@@ -833,11 +841,13 @@ footer {
   color: white;
 }
 
-footer .socialMediaLinks .footerSocials {
+footer .socialMediaLinks .footerSocials,
+.adminFooter .socialMediaLinks .footerSocials {
   color: white;
 }
 
-footer button {
+footer button,
+.adminFooter button {
   background-color: #530a0e;
   border: 2px solid white;
   padding: 5px 12px;
@@ -848,3 +858,78 @@ footer button {
   cursor: pointer;
   margin-top: 14px;
 }
+/* ------------- */
+/* Admin Pages  */
+.adminFooter {
+  background-color: orange;
+}
+
+.adminHeader {
+  background-color: orange;
+}
+
+.navagationbar h2 {
+  color: white;
+  font-size: 24px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .adminPage {
+    background-color: orange;
+  }
+}
+
+.adminMain {
+  padding-top: 80px;
+  padding-bottom: 10px;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  row-gap: 50px;
+  flex-direction: column;
+}
+
+.adminMain .adminRow {
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  column-gap: 50px;
+  row-gap: 50px;
+}
+
+.adminMain .adminColumn {
+  height: auto;
+  width: 40%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.registreer {
+  width: 450px;
+  background-color: orange;
+}
+
+.registreer form .submitLogin-register {
+  background-color: orange;
+}
+
+@media only screen and (max-width: 1000px) {
+  .adminMain .adminRow {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .adminMain .adminColumn {
+    width: 80%;
+  }
+
+  .adminMain {
+    height: auto;
+  }
+}
+/* ------------- */

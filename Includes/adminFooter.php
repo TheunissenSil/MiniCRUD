@@ -1,4 +1,4 @@
-<footer>
+<footer class="adminFooter">
     <div class="socialMediaLinks">
         <a target=”_blank” href="https://www.instagram.com/osteria_pomodoro/" class="fa fa-instagram footerSocials"></a>
 
@@ -11,13 +11,4 @@
         © Copyright <strong><span>siltheu</span></strong
         >. All Rights Reserved
     </div>
-
-    <?php                
-        if (file_exists('index.php')) {
-            echo "<a href='Pages/loginPage.php'><button>Personeels paneel</button></a>";
-        } else {
-            echo "<a href='loginPage.php'><button>Personeels paneel</button></a>";
-        }
-    ?>
-    
 </footer>

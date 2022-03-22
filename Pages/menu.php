@@ -49,180 +49,15 @@
           </div>
         <div id="pizzaMenu">
           <h2 class="menuTitel subTitel">Pizza's</h2>
-          <div class="gerecht">
-            <div>
-              <h3>Margherita</h3>
-              <p>marinarasaus, mozzarella, oregano</p>
-            </div>
-            <div class="priceCart">
-              <h3 class="priceTag">€6,99</h3>
-              <button class="addToCart">
-                <i class="fa fa-plus"></i><i class="fa fa-cart-plus"></i>
-              </button>
-            </div>
-          </div>
-          <div class="gerecht">
-            <div>
-              <h3>Pollo</h3>
-              <p>marinarasaus, kip, mozzarella, ui en paprika</p>
-            </div>
-            <div class="priceCart">
-              <h3 class="priceTag">€6,99</h3>
-              <button class="addToCart">
-                <i class="fa fa-plus"></i><i class="fa fa-cart-plus"></i>
-              </button>
-            </div>
-          </div>
-          <div class="gerecht">
-            <div>
-              <h3>Salami</h3>
-              <p>marinarasaus, mozzarella, oregano</p>
-            </div>
-            <div class="priceCart">
-              <h3 class="priceTag">€6,99</h3>
-              <button class="addToCart">
-                <i class="fa fa-plus"></i><i class="fa fa-cart-plus"></i>
-              </button>
-            </div>
-          </div>
-          <div class="gerecht">
-            <div>
-              <h3>Tonno</h3>
-              <p>marinarasaus, tonijn, rode ui, kappertjes, mozzarella</p>
-            </div>
-            <div class="priceCart">
-              <h3 class="priceTag">€6,99</h3>
-              <button class="addToCart">
-                <i class="fa fa-plus"></i><i class="fa fa-cart-plus"></i>
-              </button>
-            </div>
-          </div>
-          <div class="gerecht">
-            <div>
-              <h3>Prosciutoo di Parma</h3>
-              <p>marinarasaus, mozzarella, parmaham, rucola, parmezaan</p>
-            </div>
-            <div class="priceCart">
-              <h3 class="priceTag">€6,99</h3>
-              <button class="addToCart">
-                <i class="fa fa-plus"></i><i class="fa fa-cart-plus"></i>
-              </button>
-            </div>
-          </div>
-          <div class="gerecht">
-            <div>
-              <h3>Funghi</h3>
-              <p>marinarasaus, mozzarella, champignons</p>
-            </div>
-            <div class="priceCart">
-              <h3 class="priceTag">€6,99</h3>
-              <button class="addToCart">
-                <i class="fa fa-plus"></i><i class="fa fa-cart-plus"></i>
-              </button>
-            </div>
-          </div>
-          <div class="gerecht">
-            <div>
-              <h3>Quatro Formaggi</h3>
-              <p>marinarasaus, mozzarella, gorgonzola, parmezaan, tallegio</p>
-            </div>
-            <div class="priceCart">
-              <h3 class="priceTag">€6,99</h3>
-              <button class="addToCart">
-                <i class="fa fa-plus"></i><i class="fa fa-cart-plus"></i>
-              </button>
-            </div>
-          </div>
-          <div class="gerecht">
-            <div>
-              <h3>Pomodoro</h3>
-              <p>
-                marinarasaus, mozzarella, panchetta, gekarameliseerde ui,
-                gorgonzola
-              </p>
-            </div>
-            <div class="priceCart">
-              <h3 class="priceTag">€6,99</h3>
-              <button class="addToCart">
-                <i class="fa fa-plus"></i><i class="fa fa-cart-plus"></i>
-              </button>
-            </div>
-          </div>
+          <?php 
+            include('../Includes/menu/pizzas.php');
+          ?>
         </div>
         <div id="pastaMenu">
           <h2 class="menuTitel subTitel">Pasta's</h2>
-          <div class="gerecht">
-            <div>
-              <h3>Torteloni tartufo e mozzerella</h3>
-              <p>gevuld met mozzarella, zwarte truffel en paddestoelen</p>
-            </div>
-            <div class="priceCart">
-              <h3 class="priceTag">€6,99</h3>
-              <button class="addToCart">
-                <i class="fa fa-plus"></i><i class="fa fa-cart-plus"></i>
-              </button>
-            </div>
-          </div>
-          <div class="gerecht">
-            <div>
-              <h3>Spaghetti meatballs</h3>
-              <p>ambachtelijke gehaktballetjes, arrabiatasaus</p>
-            </div>
-            <div class="priceCart">
-              <h3 class="priceTag">€6,99</h3>
-              <button class="addToCart">
-                <i class="fa fa-plus"></i><i class="fa fa-cart-plus"></i>
-              </button>
-            </div>
-          </div>
-          <div class="gerecht">
-            <div>
-              <h3>Tagliatelle prosciutto di parma</h3>
-              <p>tomatensaus, krokante parmaham, mozzarella, rucola</p>
-            </div>
-            <div class="priceCart">
-              <h3 class="priceTag">€6,99</h3>
-              <button class="addToCart">
-                <i class="fa fa-plus"></i><i class="fa fa-cart-plus"></i>
-              </button>
-            </div>
-          </div>
-          <div class="gerecht">
-            <div>
-              <h3>Penne pollo pesto</h3>
-              <p>kipfi let, pesto, zongedroogde tomaatjes, roomsaus</p>
-            </div>
-            <div class="priceCart">
-              <h3 class="priceTag">€6,99</h3>
-              <button class="addToCart">
-                <i class="fa fa-plus"></i><i class="fa fa-cart-plus"></i>
-              </button>
-            </div>
-          </div>
-          <div class="gerecht">
-            <div>
-              <h3>Spaghetti con gamberetti</h3>
-              <p>gamba’s, knofl ook, rode peper, peterselie</p>
-            </div>
-            <div class="priceCart">
-              <h3 class="priceTag">€6,99</h3>
-              <button class="addToCart">
-                <i class="fa fa-plus"></i><i class="fa fa-cart-plus"></i>
-              </button>
-            </div>
-          </div>
-          <div class="gerecht">
-            <div>
-              <h3>Ravioli quattro formaggi</h3>
-              <p>gevuld met 4 kazen, roomboter, walnoten, parmezaan</p>
-            </div>
-            <div class="priceCart">
-              <h3 class="priceTag">€6,99</h3>
-              <button class="addToCart">
-                <i class="fa fa-plus"></i><i class="fa fa-cart-plus"></i>
-              </button>
-            </div>
-          </div>
+          <?php 
+            include('../Includes/menu/pastas.php');
+          ?>
         </div>
         <div id="drankMenu">
           <h2 class="menuTitel subTitel">Drankkaart</h2>
@@ -232,61 +67,9 @@
                 <h2>Frisdranken</h2>
               </div>
               <div class="drankjes">
-                <div class="drank">
-                  <h3>Sprite</h3>
-                  <div class="priceCart priceCartDrank">
-                    <h3 class="priceTag">€1,50</h3>
-                    <button class="addToCart">
-                      <i class="fa fa-plus"></i><i class="fa fa-cart-plus"></i>
-                    </button>
-                  </div>
-                </div>
-                <div class="drank">
-                  <h3>Fanta Orange</h3>
-                  <div class="priceCart priceCartDrank">
-                    <h3 class="priceTag">€1,50</h3>
-                    <button class="addToCart">
-                      <i class="fa fa-plus"></i><i class="fa fa-cart-plus"></i>
-                    </button>
-                  </div>
-                </div>
-                <div class="drank">
-                  <h3>Fanta Cassis</h3>
-                  <div class="priceCart priceCartDrank">
-                    <h3 class="priceTag">€1,75</h3>
-                    <button class="addToCart">
-                      <i class="fa fa-plus"></i><i class="fa fa-cart-plus"></i>
-                    </button>
-                  </div>
-                </div>
-                <div class="drank">
-                  <h3>Fanta Cassis</h3>
-                  <div class="priceCart priceCartDrank">
-                    <h3 class="priceTag">€1,75</h3>
-                    <button class="addToCart">
-                      <i class="fa fa-plus"></i><i class="fa fa-cart-plus"></i>
-                    </button>
-                  </div>
-                </div>
-                <div class="drank">
-                  <h3>Fanta Cassis</h3>
-                  <div class="priceCart priceCartDrank">
-                    <h3 class="priceTag">€1,75</h3>
-                    <button class="addToCart">
-                      <i class="fa fa-plus"></i><i class="fa fa-cart-plus"></i>
-                    </button>
-                  </div>
-                </div>
-                <div class="drank">
-                  <h3>Fanta Cassis</h3>
-                  <div class="priceCart priceCartDrank">
-                    <h3 class="priceTag">€1,75</h3>
-                    <button class="addToCart">
-                      <i class="fa fa-plus"></i><i class="fa fa-cart-plus"></i>
-                    </button>
-                  </div>
-                </div>
-                
+                <?php 
+                  include('../Includes/menu/frisdranken.php');
+                ?>
               </div>
             </div>
             <div class="drankColumn">

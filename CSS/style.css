@@ -909,6 +909,12 @@ footer button,
   justify-content: center;
 }
 
+.adminColumn .adminLine {
+  height: 5px;
+  width: 100px;
+  background-color: orange;
+}
+
 .registreer {
   width: 450px;
   background-color: orange;
@@ -930,6 +936,13 @@ footer button,
 
   .adminMain {
     height: auto;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .registreer {
+    width: 90%;
+    background-color: orange;
   }
 }
 /* ------------- */

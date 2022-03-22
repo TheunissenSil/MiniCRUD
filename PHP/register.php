@@ -47,6 +47,8 @@
     $username = $conn->real_escape_string($username);
     $password = $conn->real_escape_string($password);
 
+    $password = password_hash($password, PASSWORD_DEFAULT);
+
     // SQL Troep
     $sql = "INSERT INTO users(email,user_name,password) VALUES('$email','$username','$password')";
 

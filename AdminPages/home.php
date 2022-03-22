@@ -26,7 +26,7 @@ if(isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
         <div class="adminRow">
             <div class="adminColumn">
                 <h2 class="titleLine">Welkom, <?php echo $_SESSION['user_name']; ?></h2>
-                <div class="textLine"></div>
+                <div class="adminLine"></div>
                 <p>
                     U kunt in het admin panel gerechten aanpassen, reserveringen inzien, contact berichten inzien en nog een hele hoop andere dingen
                 </p>

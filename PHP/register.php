@@ -16,19 +16,15 @@
     if(empty($email)){
         header ("Location: ../AdminPages/home.php?error=Email is required");
         exit();
-    } else{
-        if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
-            header ("Location: ../AdminPages/home.php?error=Email must be an valid email adres");
-            exit();
-        }
+    } else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        header ("Location: ../AdminPages/home.php?error=Email must be an valid email adres");
+        exit();
     }
     
     if(empty($password)) {
         header ("Location: ../AdminPages/home.php?error=Password is required");
         exit();
-    }
-
-    if(strlen($password) < 5) {
+    } else if(strlen($password) < 5) {
         header ("Location: ../AdminPages/home.php?error=Password must be at least 5 characters");
         exit();
     }
@@ -36,9 +32,7 @@
     if(empty($confirmPassword)) {
         header ("Location: ../AdminPages/home.php?error=Confirm your Password");
         exit();
-    }
-
-    if($password != $confirmPassword) {
+    } else if($password != $confirmPassword) {
         header ("Location: ../AdminPages/home.php?error=Your passwords do not match");
         exit();
     }

@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-if(isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
+if(isset($_SESSION['id']) && isset($_SESSION['name'])) {
     ?>
 
     <!DOCTYPE html>
@@ -25,7 +25,7 @@ if(isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
     <main class="adminMain">
         <div class="adminRow">
             <div class="adminColumn">
-                <h2 class="titleLine">Welkom, <?php echo $_SESSION['user_name']; ?></h2>
+                <h2 class="titleLine">Welkom, <?php echo $_SESSION['name']; ?></h2>
                 <div class="adminLine"></div>
                 <p>
                     U kunt in het admin panel gerechten aanpassen, reserveringen inzien, contact berichten inzien en nog een hele hoop andere dingen

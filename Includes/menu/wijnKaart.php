@@ -1,15 +1,16 @@
 <?php
-    include('../includes/connector.php');
+require_once("../Includes/connector.php");
+$sql = "SELECT * FROM drankjes";
+$stmt = $connect->prepare($sql);
+$stmt->execute();
+$result = $stmt->fetchAll();
 
-    $result = mysqli_query($conn,"SELECT * FROM `drankjes`");
+    foreach ($result as $result){
+        $roundendPrice = sprintf('%0.2f', $result['drankPrijs']);
 
-    while($row = mysqli_fetch_array($result)) {
-
-        $roundendPrice = sprintf('%0.2f', $row['drankPrijs']);
-
-        if($row['category'] === "Wijnkaart") {
+        if($result['category'] === "Wijnkaart") {
             echo"<div class='drank'>";
-            echo    "<h3>" . $row['drankNaam'] ."</h3>";
+            echo    "<h3>" . $result['drankNaam'] ."</h3>";
             echo    "<div class='priceCart priceCartDrank'>";
             echo        "<h3 class='priceTag'>€" . $roundendPrice . "</h3>";
             echo        "<button class='addToCart'>";

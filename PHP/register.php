@@ -1,6 +1,6 @@
 <?php
 
-	include('../Includes/connector.php');
+	require_once('../Includes/connector.php');
 
     $email = $_POST['email'];
     $username = $_POST['username'];
@@ -42,17 +42,13 @@
         header ("Location: ../AdminPages/home.php?error=Your passwords do not match");
         exit();
     }
-
-    $email = $conn->real_escape_string($email);
-    $username = $conn->real_escape_string($username);
-    $password = $conn->real_escape_string($password);
-
+    
     $password = password_hash($password, PASSWORD_DEFAULT);
 
     $sql = "INSERT INTO users(email,user_name,password) VALUES('$email','$username','$password')";
 
-    if(mysqli_query($conn, $sql)){
+    if(mysqli_query($connect, $sql)){
 	    header('Location: ../Pages/loginPage.php');
     } else {
-	    echo 'query error: '. mysqli_error($conn);
+	    echo 'query error: '. mysqli_error($connect);
     }

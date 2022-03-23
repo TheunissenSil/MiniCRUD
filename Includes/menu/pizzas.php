@@ -1,17 +1,21 @@
 <?php
-    include('../includes/connector.php');
+require_once("../Includes/connector.php");
+$sql = "SELECT * FROM gerechten";
+$stmt = $connect->prepare($sql);
+$stmt->execute();
+$result = $stmt->fetchAll();
 
-    $result = mysqli_query($conn,"SELECT * FROM `gerechten`");
+    foreach ($result as $result){
 
-    while($row = mysqli_fetch_array($result)) {
+        $roundendPrice = sprintf('%0.2f', $result['gerechtPrijs']);
 
-        $roundendPrice = sprintf('%0.2f', $row['gerechtPrijs']);
+        if($result['category'] === "Pizza's") 
+        {
 
-        if($row['category'] === "Pizza's") {
             echo "<div class='gerecht'>";
             echo    "<div>";
-            echo        "<h3>" . $row['gerechtNaam'] . "</h3>";
-            echo        "<p>" . $row['gerechtBeschrijving'] . "</p>";
+            echo        "<h3>" . $result['gerechtNaam'] . "</h3>";
+            echo        "<p>" . $result['gerechtBeschrijving'] . "</p>";
             echo    "</div>";
             echo    "<div class='priceCart'>";
             echo        "<h3 class='priceTag'>€" . $roundendPrice . "</h3>";
@@ -20,6 +24,6 @@
             echo        "</button>";
             echo    "</div>";
             echo"</div>";
-        } 
+
+        }
     }
-?>

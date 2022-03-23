@@ -1,17 +1,19 @@
 <?php
-    include('../includes/connector.php');
+require_once("../Includes/connector.php");
+$sql = "SELECT * FROM gerechten";
+$stmt = $connect->prepare($sql);
+$stmt->execute();
+$result = $stmt->fetchAll();
 
-    $result = mysqli_query($conn,"SELECT * FROM `gerechten` ORDER BY `gerechten`.`category` ASC");
+    foreach ($result as $result){
 
-    while($row = mysqli_fetch_array($result)) {
-
-        $roundendPrice = sprintf('%0.2f', $row['gerechtPrijs']);
+        $roundendPrice = sprintf('%0.2f', $result['gerechtPrijs']);
 
         echo "<tr>";
-        echo    "<td>" . $row['gerechtNaam'] . "</td>";
-        echo    "<td>" . $row['gerechtBeschrijving'] . "</td>";
+        echo    "<td>" . $result['gerechtNaam'] . "</td>";
+        echo    "<td>" . $result['gerechtBeschrijving'] . "</td>";
         echo    "<td>" . $roundendPrice . "</td>";
-        echo    "<td>" . $row['category'] . "</td>";
+        echo    "<td>" . $result['category'] . "</td>";
         echo    "<td class='changeDelButton'><button>Change</button></td>";
         echo    "<td class='changeDelButton'><button class='delete'>Delete</button></td>";
         echo "</tr>";

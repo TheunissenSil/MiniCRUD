@@ -1,6 +1,6 @@
 <?php
 session_start();
-include "../Includes/connector.php";
+require_once("../Includes/connector.php");
 
 $username = $_POST['username'];
 $password = $_POST['password'];
@@ -13,18 +13,22 @@ if(empty($username)) {
     exit();
 }
 
-$sql = "SELECT * FROM users WHERE user_name='$username'";
+$sql = "SELECT id, password FROM users WHERE user_name =:username";
+$stmt = $connect->prepare($sql);
+$stmt->bindParam(":username", $username);
+$stmt->execute();
+$result = $stmt->fetchAll();
 
-$result = mysqli_query($conn, $sql);
-
-$row = mysqli_fetch_assoc($result);
-
-if($row['user_name'] === $username && password_verify($password, $row['password'])) {
-    $_SESSION['user_name'] = $row['user_name'];
-    $_SESSION['id'] = $row['id'];
-    header("Location: ../Adminpages/home.php");
-    exit();
-} else {
-    header("Location: ../Pages/loginPage.php?error=Password or username is incorrect$passwordHash");
-    exit();
+foreach ($result as $result) {
+    if(password_verify($password, $result['password'])) {
+        $_SESSION['user_name'] = $username;
+        $_SESSION['id'] = $result['id'];
+        header("Location: ../Adminpages/home.php");
+        exit();
+    } else {
+        header("Location: ../pages/loginPage.php?error=Password or username is incorrect");
+        exit();
+    }
 }
+
+header("Location: ../pages/loginPage.php?error=Password or username is incorrect");

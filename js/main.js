@@ -1,11 +1,11 @@
 // Back to Top button
-window.onscroll = function () {
-  if (pageYOffset >= 200) {
-    document.getElementById("arrow").style.visibility = "visible";
-  } else {
-    document.getElementById("arrow").style.visibility = "hidden";
-  }
-};
+//window.onscroll = function () {
+//  if (pageYOffset >= 200) {
+//    document.getElementById("arrow").style.visibility = "visible";
+//  } else {
+//    document.getElementById("arrow").style.visibility = "hidden";
+//  }
+//};
 
 // Datum van vandaag
 let today = new Date();
@@ -26,4 +26,21 @@ if (today.getDate() < 10) {
 
 let date = today.getFullYear() + "-" + month + "-" + today.getDate();
 
-document.querySelector("#datumForm").setAttribute("min", date);
+const datumForm = document.querySelector("#datumForm");
+
+if (datumForm) {
+  datumForm.setAttribute("min", date);
+}
+
+// Check form
+const loginForm = document.querySelector("#loginPage");
+
+loginForm.addEventListener("submit", (e) => {
+  //e.preventDefault();
+
+  if (document.querySelector("#username").value.length == 0) {
+    console.log("username empty");
+  }
+
+  console.log("emptyfields");
+});

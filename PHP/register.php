@@ -39,10 +39,14 @@
     
     $password = password_hash($password, PASSWORD_DEFAULT);
 
-    $sql = "INSERT INTO users(email,user_name,password) VALUES('$email','$username','$password')";
+    $data = [
+        'email' => $email,
+        'username' => $username,
+        'password' => $password,
+    ];
+    $sql = "INSERT INTO users(email, user_name, password) VALUES(:email, :username, :password)";
 
-    if(mysqli_query($connect, $sql)){
-	    header('Location: ../Pages/loginPage.php');
-    } else {
-	    echo 'query error: '. mysqli_error($connect);
-    }
+    $stmt = $connect->prepare($sql);
+    $stmt->execute($data);
+
+    header ("Location: ../AdminPages/home.php?error=Your account has been registered");

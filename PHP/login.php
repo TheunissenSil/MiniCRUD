@@ -3,10 +3,10 @@ session_start();
 require_once("../Includes/connector.php");
 
 if(empty($_POST['username'])) {
-    header ("Location: ../Pages/loginPage.php?error=Username is qequired");
+    header ("Location: ../Pages/loginPage.php?error=Username is required");
     exit();
 } else if(empty($_POST['password'])) {
-    header ("Location: ../Pages/loginPage.php?error=Password is qequired");
+    header ("Location: ../Pages/loginPage.php?error=Password is required");
     exit();
 }
 

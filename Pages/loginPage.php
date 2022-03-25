@@ -16,12 +16,12 @@
       <div class="loginRegisterContainer">
         <div class="login-register login">
           <h2>Login</h2>
-          <form action="../PHP/login.php" method="post">
+          <form id="loginPage" action="../PHP/login.php" method="post">
             <?php if(isset($_GET['error'])) { ?>
               <p class="error"> <?php echo $_GET['error']; ?></p>
              <?php } ?>
             <h3>Username</h3>
-            <input placeholder="Uw username....." type="text" name="username">
+            <input id="username" placeholder="Uw username....." type="text" name="username">
             <h3>Password</h3>
             <input placeholder="Uw password....." type="Password" name="password">
             <input type="submit" value="Login" class="submitLogin-register">

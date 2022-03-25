@@ -336,7 +336,7 @@ label {
 .login-register {
   width: 350px;
   height: auto;
-  background-color: #530a0e;
+  background-color: orange;
   border-radius: 15px;
   padding: 15px;
   text-align: center;
@@ -357,8 +357,8 @@ label {
   height: 44px;
   font-size: 14px;
   color: #fff;
-  background-color: #530a0e;
-  border-color: #530a0e;
+  background-color: orange;
+  border-color: orange;
   border-radius: 15px;
   width: 150px;
 }
@@ -396,8 +396,8 @@ label {
   height: 44px;
   font-size: 14px;
   color: #fff;
-  background-color: #530a0e;
-  border-color: white;
+  background-color: orange;
+  border-color: black;
   border-radius: 15px;
   width: 100px;
 }

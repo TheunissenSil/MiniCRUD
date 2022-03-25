@@ -22,6 +22,30 @@ leuk
   width: 100%;
   text-align: center;
 }
+
+.backToTop {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 99;
+  border: none;
+  background-color: #530a0e;
+  color: white;
+  cursor: pointer;
+  padding: 10px 0 0 10px;
+  border-radius: 100% 0 0 0;
+  width: 60px;
+  height: 60px;
+}
+
+.backToTop div {
+  margin-right: 0;
+}
+
+.adminBackToTop {
+  background-color: orange;
+}
 /* ------------- */
 /* Socials */
 .fa {
@@ -846,8 +870,7 @@ footer .socialMediaLinks .footerSocials,
   color: white;
 }
 
-footer button,
-.adminFooter button {
+footer .inlogpageButton {
   background-color: #530a0e;
   border: 2px solid white;
   padding: 5px 12px;

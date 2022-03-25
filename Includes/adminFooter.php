@@ -1,4 +1,7 @@
 <footer class="adminFooter">
+    <button onclick="topFunction()" id="backToTop" class="adminBackToTop backToTop"><div class="fa fa-chevron-up"></div></button>
+
+
     <div class="socialMediaLinks">
         <a target=”_blank” href="https://www.instagram.com/osteria_pomodoro/" class="fa fa-instagram footerSocials"></a>
 

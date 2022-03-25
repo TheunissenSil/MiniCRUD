@@ -65,6 +65,7 @@ if(isset($_SESSION['id']) && isset($_SESSION['name'])) {
     <?php
       include('../Includes/adminFooter.php');
     ?>
+    <script src="../JS/main.js"></script>
     </body>
     </html>
 

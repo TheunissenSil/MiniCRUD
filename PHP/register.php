@@ -8,29 +8,13 @@
     $confirmPassword = $_POST['confirmPassword'];
 
     // checks
-    if(empty($username)) {
-        header ("Location: ../AdminPages/home.php?error=Username is required");
-        exit();
-    }
-
-    if(empty($email)){
-        header ("Location: ../AdminPages/home.php?error=Email is required");
-        exit();
-    } else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         header ("Location: ../AdminPages/home.php?error=Email must be an valid email adres");
         exit();
     }
     
-    if(empty($password)) {
-        header ("Location: ../AdminPages/home.php?error=Password is required");
-        exit();
-    } else if(strlen($password) < 5) {
+    if(strlen($password) < 5) {
         header ("Location: ../AdminPages/home.php?error=Password must be at least 5 characters");
-        exit();
-    }
-
-    if(empty($confirmPassword)) {
-        header ("Location: ../AdminPages/home.php?error=Confirm your Password");
         exit();
     } else if($password != $confirmPassword) {
         header ("Location: ../AdminPages/home.php?error=Your passwords do not match");
@@ -44,6 +28,7 @@
         'username' => $username,
         'password' => $password,
     ];
+    
     $sql = "INSERT INTO users(email, user_name, password) VALUES(:email, :username, :password)";
 
     $stmt = $connect->prepare($sql);

@@ -1,4 +1,7 @@
 <footer>
+    <button onclick="topFunction()" class="backToTop" id="backToTop"><div class="fa fa-chevron-up"></div></button>
+
+
     <div class="socialMediaLinks">
         <a target=”_blank” href="https://www.instagram.com/osteria_pomodoro/" class="fa fa-instagram footerSocials"></a>
 
@@ -14,9 +17,9 @@
 
     <?php                
         if (file_exists('index.php')) {
-            echo "<a href='Pages/loginPage.php'><button>Personeels paneel</button></a>";
+            echo "<a href='Pages/loginPage.php'><button class='inlogpageButton'>Personeels paneel</button></a>";
         } else {
-            echo "<a href='loginPage.php'><button>Personeels paneel</button></a>";
+            echo "<a href='loginPage.php'><button class='inlogpageButton'>Personeels paneel</button></a>";
         }
     ?>
     

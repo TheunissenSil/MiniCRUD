@@ -905,7 +905,7 @@ footer .inlogpageButton {
 .adminMain {
   padding-top: 80px;
   padding-bottom: 10px;
-  height: 100vh;
+  height: auto;
   width: 100%;
   display: flex;
   justify-content: center;

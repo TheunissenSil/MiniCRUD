@@ -121,3 +121,23 @@ if (registerForm) {
     }
   });
 }
+
+// Are you sure?
+const deleteButton = document.querySelector("#delete");
+const areYouSure = document.querySelector("#areYouSure");
+const notSure = document.querySelector("#notSure");
+
+if (deleteButton) {
+  console.log("jemoeder");
+  deleteButton.addEventListener("click", () => {
+    deleteButton.style.display = "none";
+    areYouSure.style.display = "flex";
+  });
+}
+
+if (notSure) {
+  notSure.addEventListener("click", () => {
+    deleteButton.style.display = "unset";
+    areYouSure.style.display = "none";
+  });
+}

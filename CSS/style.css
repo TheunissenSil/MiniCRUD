@@ -1047,6 +1047,28 @@ footer .inlogpageButton {
   width: 10%;
 }
 
+.adminMain .adminRow table .datum {
+  width: 15%;
+}
+
+.adminMain .adminRow table .naam,
+.adminMain .adminRow table .email {
+  width: 20%;
+}
+
+.adminMain .adminRow table .tijd,
+.adminMain .adminRow table .personen {
+  width: 7.5%;
+}
+
+.adminMain .adminRow table .bijzonderheden {
+  width: 20%;
+}
+
+.adminMain .adminRow table .bericht {
+  width: 50%;
+}
+
 .adminMain .adminRow table th {
   background-color: orange;
   color: white;

@@ -34,18 +34,18 @@ if(isset($_SESSION['id']) && isset($_SESSION['name'])) {
             <div class="adminColumn">
                 <div class="login-register registreer">
                     <h2>Nieuwe werknemer registeren</h2>
-                    <form id="registerForm" action="../PHP/register.php" method="post">
+                    <form class="formulier" action="../PHP/register.php" method="post">
                         <?php if(isset($_GET['error'])) { ?>
                             <p class="error"> <?php echo $_GET['error']; ?></p>
                         <?php } ?>
                         <h3>Username</h3>
-                        <input id="usernameRegister" placeholder="Uw username....." type="text" name="username">
+                        <input class="inputForm" placeholder="Uw username....." type="text" name="username">
                         <h3>Email</h3>
-                        <input id="emailRegister" placeholder="Uw email....." type="text" name="email">
+                        <input class="inputForm" placeholder="Uw email....." type="text" name="email">
                         <h3>Password</h3>
-                        <input id="passwordRegister" placeholder="Uw password....." type="Password" name="password">
+                        <input class="inputForm" placeholder="Uw password....." type="Password" name="password">
                         <h3>Confrim Password</h3>
-                        <input id="confirmpasswordRegister" placeholder="Confirm password....." type="Password" name="confirmPassword">
+                        <input class="inputForm" placeholder="Confirm password....." type="Password" name="confirmPassword">
                         <input type="submit" value="Registreren" class="submitLogin-register">
                     </form>
                 </div>

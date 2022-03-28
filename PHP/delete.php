@@ -9,4 +9,8 @@ $stmt = $connect->prepare($sql);
 $stmt->bindParam(":ID", $_GET['id']);
 $stmt->execute();
 
-header ("Location: ../AdminPages/changeMenu.php");
+if ($dataTable === "reserveringen" ||  $dataTable === "contact") {
+    header ("Location: ../AdminPages/adminReserveringen-contact.php");
+} else {
+    header ("Location: ../AdminPages/changeMenu.php");
+}

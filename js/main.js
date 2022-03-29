@@ -47,8 +47,8 @@ if (datumForm) {
 }
 
 // Check login form
-const form = document.getElementsByClassName("formulier");
-const formInput = document.getElementsByClassName("inputForm");
+const form = document.querySelectorAll(".formulier");
+const formInput = document.querySelectorAll(".formulier .inputForm");
 
 for (let q = 0; q < form.length; q++) {
   if (form[q]) {
@@ -59,6 +59,25 @@ for (let q = 0; q < form.length; q++) {
           formInput[i].style.border = "2px solid red";
         } else {
           formInput[i].style.border = "1px solid black";
+        }
+      }
+    });
+  }
+}
+
+// Eventueel 2de formulier op de pagina!
+const secondForm = document.querySelectorAll(".formulier2");
+const secondFormInput = document.querySelectorAll(".formulier2 .inputForm");
+
+for (let q = 0; q < form.length; q++) {
+  if (secondForm[q]) {
+    secondForm[q].addEventListener("submit", (e) => {
+      for (let i = 0; i < secondFormInput.length; i++) {
+        if (secondFormInput[i].value.length == 0) {
+          e.preventDefault();
+          secondFormInput[i].style.border = "2px solid red";
+        } else {
+          secondFormInput[i].style.border = "1px solid black";
         }
       }
     });

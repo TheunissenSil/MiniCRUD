@@ -21,7 +21,7 @@
             <div class="column">
               <div class="contact-reserveren">
                 <?php if(isset($_GET['reserveringError'])) { ?>
-                  <h2 class="titel"><?php echo $_GET['reserveringError']; ?></h2> 
+                  <h2 style="color: red;" class="titel"><?php echo $_GET['reserveringError']; ?></h2> 
                 <?php } else { ?>
                   <h2 class="titel"><?php echo "Reservatie formulier"; ?></h2>
                 <?php } ?>
@@ -38,11 +38,11 @@
 
                   <div class="datum-tijd">
                     <div class="personen-tijd form-element ">
-                      <input type="Number" max="12" class="form-input" placeholder="Personen" name="personen"/>
+                      <input type="Number" max="12" class="form-input inputForm" placeholder="Personen" name="personen"/>
                     </div>
 
                     <div class="datum form-element ">
-                      <input id="datumForm" type="Date" class="form-input" placeholder="Datum" name="datum"/>
+                      <input id="datumForm" type="Date" class="form-input inputForm" placeholder="Datum" name="datum"/>
                     </div>
 
                     <div class="personen-tijd form-element ">
@@ -106,20 +106,24 @@
             </div>
             <div class="column">
               <div class="contact-reserveren">
-                <h2 class="titel">Contact formulier</h2>
-                <form class="contact-form formulier">
+                <?php if(isset($_GET['contactError'])) { ?>
+                  <h2 style="color: red;" class="titel"><?php echo $_GET['contactError']; ?></h2> 
+                <?php } else { ?>
+                  <h2 class="titel"><?php echo "Contact formulier"; ?></h2>
+                <?php } ?>
+                <form class="contact-form formulier2" action="../PHP/contact.php" method="post">
                   <div class="naam-email">
                     <div class="form-element">
-                      <input type="text" class="form-input inputForm" placeholder="Volledige naam" />
+                      <input type="text" class="form-input inputForm" placeholder="Volledige naam" name="name"/>
                     </div>
 
                     <div class="form-element">
-                      <input type="email" class="form-input inputForm" placeholder="E-mailadres" />
+                      <input type="email" class="form-input inputForm" placeholder="E-mailadres" name="email"/>
                     </div>
                   </div>
 
                   <div class="form-element">
-                    <input type="text" class="form-input inputForm" placeholder="Onderwerp" />
+                    <input type="text" class="form-input inputForm" placeholder="Onderwerp" name="onderwerp"/>
                   </div>
 
                   <div class="form-element">
@@ -128,6 +132,7 @@
                       class="form-input inputForm"
                       rows="5"
                       placeholder="Bericht"
+                      name="bericht"
                     ></textarea>
                   </div>
 

@@ -56,6 +56,7 @@ if(isset($_SESSION['id']) && isset($_SESSION['name'])) {
           <tr>
             <th class="naam">Volledige naam</th>
             <th class="email">E-mail</th>
+            <th class="onderwerp">onderwerp</th>
             <th class="bericht">Contact bericht</th>
             <th class="gerechtDelete">Verwijderen</th>
           </tr>

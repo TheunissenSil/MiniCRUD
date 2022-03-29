@@ -905,6 +905,7 @@ footer .inlogpageButton {
 .adminMain {
   padding-top: 80px;
   padding-bottom: 10px;
+  min-height: 100vh;
   height: auto;
   width: 100%;
   display: flex;
@@ -1052,8 +1053,9 @@ footer .inlogpageButton {
 }
 
 .adminMain .adminRow table .naam,
-.adminMain .adminRow table .email {
-  width: 20%;
+.adminMain .adminRow table .email,
+.adminMain .adminRow table .onderwerp {
+  width: 15%;
 }
 
 .adminMain .adminRow table .tijd,
@@ -1062,11 +1064,11 @@ footer .inlogpageButton {
 }
 
 .adminMain .adminRow table .bijzonderheden {
-  width: 20%;
+  width: 30%;
 }
 
 .adminMain .adminRow table .bericht {
-  width: 50%;
+  width: 45%;
 }
 
 .adminMain .adminRow table th {

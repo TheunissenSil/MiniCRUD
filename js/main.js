@@ -83,3 +83,34 @@ for (let q = 0; q < form.length; q++) {
     });
   }
 }
+
+// ChangeMenuForm
+const gerechtenForm = document.querySelector("#gerechtenForm");
+const drankjesForm = document.querySelector("#drankjesForm");
+
+if (window.location.href.indexOf("#gerechtenForm") > -1) {
+  drankjesForm.style.display = "none";
+  gerechtenForm.style.display = "block";
+}
+
+if (window.location.href.indexOf("#drankjesForm") > -1) {
+  gerechtenForm.style.display = "none";
+  drankjesForm.style.display = "block";
+}
+
+const drankjesButton = document.querySelector("#drankjesButton");
+const gerechtenButton = document.querySelector("#gerechtenButton");
+
+if (gerechtenButton) {
+  gerechtenButton.addEventListener("click", () => {
+    drankjesForm.style.display = "none";
+    gerechtenForm.style.display = "block";
+  });
+}
+
+if (drankjesButton) {
+  drankjesButton.addEventListener("click", () => {
+    gerechtenForm.style.display = "none";
+    drankjesForm.style.display = "block";
+  });
+}

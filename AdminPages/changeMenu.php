@@ -26,7 +26,7 @@ if(isset($_SESSION['id']) && isset($_SESSION['name'])) {
         <div class="adminRow tableRow">
             <div>
                 <h2>Verander de menukaart</h2>
-                <button>Gerecht toevoegen</button>
+                <a href="changeMenuForm.php#gerechtenForm"><button>Gerecht toevoegen</button></a>
             </div>
             <table>
                 <tr>
@@ -45,7 +45,7 @@ if(isset($_SESSION['id']) && isset($_SESSION['name'])) {
         <div class="adminRow tableRow">
             <div>
                 <h2>Verander het drankmenu</h2>
-                <button>Drankje toevoegen</button>
+                <a href="changeMenuForm.php#drankjesForm"><button>Drankje toevoegen</button></a>
             </div>
             <table>
                 <tr>

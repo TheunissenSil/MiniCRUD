@@ -27,9 +27,9 @@
     $password = password_hash($password, PASSWORD_DEFAULT);
 
     $data = [
-        'email' => $email,
-        'username' => $username,
-        'password' => $password,
+        ':email' => $email,
+        ':username' => $username,
+        ':password' => $password,
     ];
     
     $sql = "INSERT INTO users(email, user_name, password) VALUES(:email, :username, :password)";

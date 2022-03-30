@@ -11,12 +11,12 @@
     }
 
     $data = [
-        'name' => $_POST['name'],
-        'email' => $email,
-        'personen' => $_POST['personen'],
-        'datum' => $_POST['datum'],
-        'tijd' => $_POST['tijd'],
-        'bijzonderheden' => $_POST['bijzonderheden'],
+        ':name' => $_POST['name'],
+        ':email' => $email,
+        ':personen' => $_POST['personen'],
+        ':datum' => $_POST['datum'],
+        ':tijd' => $_POST['tijd'],
+        ':bijzonderheden' => $_POST['bijzonderheden'],
     ];
     
     $sql = "INSERT INTO reserveringen(naam, email, personen, datum, tijd, bijzonderheden) VALUES(:name, :email, :personen, :datum, :tijd, :bijzonderheden)";

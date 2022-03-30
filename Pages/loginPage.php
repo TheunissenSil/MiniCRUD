@@ -13,8 +13,8 @@
   </head>
   <body>
     <section id="start">
-      <div class="loginRegisterContainer">
-        <div class="login-register login">
+      <div class="adminFormContainer">
+        <div class="adminForm login">
           <h2>Login</h2>
           <form class="formulier" action="../PHP/login.php" method="post">
             <?php if(isset($_GET['error'])) { ?>
@@ -24,7 +24,7 @@
             <input class="inputForm" placeholder="Uw username....." type="text" name="username">
             <h3>Password</h3>
             <input class="inputForm" placeholder="Uw password....." type="Password" name="password">
-            <input type="submit" value="Login" class="submitLogin-register">
+            <input type="submit" value="Login" class="submitadminForm">
           </form>
         </div>
         <div class="buttons">

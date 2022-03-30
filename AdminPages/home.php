@@ -32,7 +32,7 @@ if(isset($_SESSION['id']) && isset($_SESSION['name'])) {
                 </p>
             </div>
             <div class="adminColumn">
-                <div class="login-register registreer">
+                <div class="adminForm registreer">
                     <h2>Nieuwe werknemer registeren</h2>
                     <form class="formulier" action="../PHP/register.php" method="post">
                         <?php if(isset($_GET['error'])) { ?>
@@ -46,7 +46,7 @@ if(isset($_SESSION['id']) && isset($_SESSION['name'])) {
                         <input class="inputForm" placeholder="Uw password....." type="Password" name="password">
                         <h3>Confrim Password</h3>
                         <input class="inputForm" placeholder="Confirm password....." type="Password" name="confirmPassword">
-                        <input type="submit" value="Registreren" class="submitLogin-register">
+                        <input type="submit" value="Registreren" class="submitadminForm">
                     </form>
                 </div>
             </div>

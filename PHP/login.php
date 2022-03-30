@@ -2,8 +2,6 @@
 session_start();
 require_once("../Includes/connector.php");
 
-//admin
-
 $sql = "SELECT id, password FROM users WHERE user_name = :username";
 
 $stmt = $connect->prepare($sql);

@@ -17,9 +17,9 @@
 
     <?php                
         if (file_exists('index.php')) {
-            echo "<a href='Pages/loginPage.php'><button class='inlogpageButton'>Personeels paneel</button></a>";
+            echo "<a href='AdminPages/home.php'><button class='inlogpageButton'>Personeels paneel</button></a>";
         } else {
-            echo "<a href='loginPage.php'><button class='inlogpageButton'>Personeels paneel</button></a>";
+            echo "<a href='../AdminPages/home.php'><button class='inlogpageButton'>Personeels paneel</button></a>";
         }
     ?>
     

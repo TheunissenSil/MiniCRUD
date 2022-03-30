@@ -11,10 +11,10 @@
     }
 
     $data = [
-        'name' => $_POST['name'],
-        'email' => $email,
-        'onderwerp' => $_POST['onderwerp'],
-        'bericht' => $_POST['bericht'],
+        ':name' => $_POST['name'],
+        ':email' => $email,
+        ':onderwerp' => $_POST['onderwerp'],
+        ':bericht' => $_POST['bericht'],
     ];
     
     $sql = "INSERT INTO contact(naam, email, onderwerp, bericht) VALUES(:name, :email, :onderwerp, :bericht)";

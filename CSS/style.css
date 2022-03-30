@@ -347,7 +347,7 @@ label {
 
 /* ------------- */
 /* Login / Register */
-.loginRegisterContainer {
+.adminFormContainer {
   width: 100%;
   height: 100%;
   display: flex;
@@ -357,7 +357,7 @@ label {
   position: absolute;
 }
 
-.login-register {
+.adminForm {
   width: 350px;
   height: auto;
   background-color: orange;
@@ -387,24 +387,50 @@ label {
   width: 150px;
 }
 
-.login-register h2 {
+.menuFormbuttons {
+  width: 350px;
+  height: auto;
+  margin-top: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menuFormbuttons a {
+  height: 44px;
+  width: 30%;
+}
+
+.menuFormbuttons a button {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  font-size: 14px;
+  color: #fff;
+  background-color: orange;
+  border-color: orange;
+  border-radius: 15px;
+}
+
+.adminForm h2 {
   font-size: 40px;
   margin-bottom: 25px;
 }
 
-.login-register form {
+.adminForm form {
   width: 100%;
 }
 
-.login-register form .error {
+.adminForm form .error {
   margin-bottom: 25px;
 }
 
-.login-register form h3 {
+.adminForm form h3 {
   font-size: 20px;
 }
 
-.login-register form input {
+.adminForm form input,
+.adminForm form select {
   height: 44px;
   border-radius: 4px;
   font-size: 14px;
@@ -415,7 +441,7 @@ label {
   margin-bottom: 25px;
 }
 
-.login-register form .submitLogin-register {
+.adminForm form .submitadminForm {
   cursor: pointer;
   height: 44px;
   font-size: 14px;
@@ -427,8 +453,18 @@ label {
 }
 
 @media only screen and (max-width: 425px) {
-  .login-register {
+  .adminForm {
     width: 90%;
+  }
+
+  .menuFormbuttons {
+    flex-direction: column;
+  }
+
+  .menuFormbuttons a {
+    height: 44px;
+    margin-bottom: 25px;
+    width: 150px;
   }
 }
 
@@ -703,7 +739,7 @@ label {
 .containerMenu #drankMenu .drankRow .drankColumn .drankTitel {
   text-align: center;
   color: white;
-  height: 10%;
+  height: 8%;
 }
 
 .containerMenu #drankMenu .drankRow .drankColumn .drankjes {
@@ -944,13 +980,14 @@ footer .inlogpageButton {
   background-color: orange;
 }
 
-.adminMain .adminRow .adminColumn .registreer form .submitLogin-register {
+.adminMain .adminRow .adminColumn .registreer form .submitadminForm {
   background-color: orange;
 }
 
 .tableMain {
   height: auto;
   padding-top: 100px;
+  margin-bottom: 100px;
 }
 
 .adminMain .tableRow {
@@ -985,7 +1022,6 @@ footer .inlogpageButton {
 
 .adminMain .adminRow table {
   width: 80%;
-  margin-bottom: 100px;
   min-width: 1000px;
 }
 
@@ -1104,3 +1140,10 @@ footer .inlogpageButton {
   }
 }
 /* ------------- */
+#gerechtenForm {
+  display: block;
+}
+
+#drankjesForm {
+  display: none;
+}

@@ -8,8 +8,11 @@
     $confirmPassword = $_POST['confirmPassword'];
 
     // checks
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        header ("Location: ../AdminPages/home.php?error=Email must be an valid email adres");
+    $stmt = $connect->prepare("SELECT * FROM users WHERE user_name=?");
+    $stmt->execute([$username]); 
+    $user = $stmt->fetch();
+    if ($user) {
+        header ("Location: ../AdminPages/home.php?error=This username is already taken!");
         exit();
     }
     

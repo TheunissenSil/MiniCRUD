@@ -12,7 +12,7 @@ $result = $stmt->fetchAll();
         if($result['category'] === "Pizza's") 
         {
 
-            echo "<div class='gerecht'>";
+            echo"<div class='gerecht'>";
             echo    "<div>";
             echo        "<h3>" . $result['gerechtNaam'] . "</h3>";
             echo        "<p>" . $result['gerechtBeschrijving'] . "</p>";

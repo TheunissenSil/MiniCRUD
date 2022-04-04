@@ -24,7 +24,7 @@ if(isset($_SESSION['id']) && isset($_SESSION['name'])) {
         <title>Home Page Admin</title>
     </head>
     <body>
-        <section id="start">
+        <section id="start" class="changeMenuFormPage">
         <div class="adminFormContainer">
             <div class="adminForm" id="gerechtenForm">
                 <h2>Gerechten toevoegen of aanpassen</h2>

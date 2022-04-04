@@ -69,7 +69,7 @@
                   <div class="form-element">
                     <textarea
                       style="height: 125px"
-                      class="form-input inputForm"
+                      class="form-input"
                       rows="5"
                       placeholder="Bijzonderheden"
                       name="bijzonderheden"

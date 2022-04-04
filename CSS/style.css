@@ -140,14 +140,18 @@ header {
   }
 }
 
+.searchFrom {
+  margin: 0 25px 0 25px;
+  width: 400px;
+}
+
 .searchBar {
   height: 44px;
+  width: 100%;
   border-radius: 4px;
   font-size: 14px;
-  width: 400px;
   padding: 5px 5px;
   border: 1px solid;
-  margin: 0 25px 0 25px;
 }
 
 nav ul {
@@ -798,6 +802,33 @@ label {
 }
 
 /* ------------- */
+/* Search Page  */
+.searchMain {
+  min-height: 100vh;
+  padding-top: 25px;
+}
+
+.searchMain .searchMenu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.searchMain .searchMenu .niksGevonden {
+  padding-top: 200px;
+}
+
+.searchMain .searchMenu .niksGevonden h3 {
+  margin-top: 20px;
+}
+
+@media only screen and (max-height: 500px) {
+  .searchMain .searchMenu .niksGevonden {
+    padding-top: 50px;
+  }
+}
+/* ------------- */
 /* Formulieren  */
 .contact-reserveren {
   display: flex;
@@ -904,6 +935,10 @@ footer,
 footer .socialMediaLinks .footerSocials,
 .adminFooter .socialMediaLinks .footerSocials {
   color: white;
+}
+
+footer .copyRight {
+  text-align: center;
 }
 
 footer .inlogpageButton {
@@ -1146,4 +1181,12 @@ footer .inlogpageButton {
 
 #drankjesForm {
   display: none;
+}
+
+.loginPage {
+  min-height: 500px;
+}
+
+.changeMenuFormPage {
+  min-height: 800px;
 }

@@ -12,7 +12,7 @@
     <title>MiniCRUD</title>
   </head>
   <body>
-    <section id="start">
+    <section id="start" class="loginPage">
       <div class="adminFormContainer">
         <div class="adminForm login">
           <h2>Login</h2>

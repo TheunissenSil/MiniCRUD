@@ -8,7 +8,13 @@
           }
         ?>
 
-        <input class="searchBar" type="search" placeholder="Zoek een gerecht">
+        <?php  
+          if (file_exists('index.php')) {
+            echo "<form class='searchFrom' action='Pages/searchPage.php' method='GET'><input class='searchBar' name='searchInput' type='search' placeholder='Zoek een gerecht'></form>";
+          } else {
+            echo "<form class='searchFrom' action='searchPage.php' method='GET'><input class='searchBar' name='searchInput' type='search' placeholder='Zoek een gerecht'></form>";
+          }
+        ?>
 
         <label for="toggle-1" class="toggle-menu"
           ><ul>

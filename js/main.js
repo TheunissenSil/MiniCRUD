@@ -46,7 +46,7 @@ if (datumForm) {
   datumForm.setAttribute("min", date);
 }
 
-// Check login form
+// Check forms
 const form = document.querySelectorAll(".formulier");
 const formInput = document.querySelectorAll(".formulier .inputForm");
 

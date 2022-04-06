@@ -1,5 +1,5 @@
 <?php
-
+if(isset($_POST['contactSubmit'])) {
 	require_once('../Includes/connector.php');
 
     $email = $_POST['email'];
@@ -23,3 +23,6 @@
     $stmt->execute($data);
 
     header ("Location: ../Pages/reserveren-contact.php?contactError=Bedankt voor uw bericht");
+} else {
+    header ("Location: ../Pages/reserveren-contact.php");
+}

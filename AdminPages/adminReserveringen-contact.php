@@ -1,9 +1,6 @@
 <?php
-session_start();
-
-if(isset($_SESSION['id']) && isset($_SESSION['name'])) {
-    ?>
-
+include_once("../Includes/session.php")
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -73,9 +70,3 @@ if(isset($_SESSION['id']) && isset($_SESSION['name'])) {
     <script src="../JS/main.js"></script>
   </body>
 </html>
-
-<?php
-} else {
-    header("Location: ../Pages/loginPage.php");
-    exit();
-}?>

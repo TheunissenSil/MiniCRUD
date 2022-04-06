@@ -77,7 +77,7 @@
                   </div>
 
                   <div class="form-submit">
-                    <input type="submit" class="submit-button" />
+                    <input type="submit" class="submit-button" name="reserveringSubmit"/>
                   </div>
                 </form>
               </div>
@@ -137,7 +137,7 @@
                   </div>
 
                   <div class="form-submit">
-                    <input type="submit" class="submit-button" />
+                    <input type="submit" class="submit-button" name="contactSubmit"/>
                   </div>
                 </form>
               </div>

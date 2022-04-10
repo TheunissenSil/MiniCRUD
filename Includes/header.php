@@ -33,42 +33,47 @@
               } else {
                 echo "<li><a href='../index.php#start'>Home</a></li>";
               }
-            ?>
-            <?php  
+
                if (file_exists('index.php')) {
                 echo "<li><a href='index.php#pageAbout'>About</a></li>";
               } else {
                 echo "<li><a href='../index.php#pageAbout'>About</a></li>";
               }
-            ?>
-            <?php  
+   
               if (file_exists('index.php')) {
                 echo "<li><a href='Pages/menu.php'>Menu</a></li>";
               } else {
                 echo "<li><a href='menu.php'>Menu</a></li>";
               }
-            ?>
-            <?php                
+                  
               if (file_exists('index.php')) {
                 echo "<li><a href='Pages/reserveren-contact.php#reserveren'>Reserveren</a></li>";
               } else {
                 echo "<li><a href='reserveren-contact.php#reserveren'>Reserveren</a></li>";
               }
-            ?>
-            <?php                
+               
               if (file_exists('index.php')) {
                 echo "<li><a href='Pages/reserveren-contact.php#contact'>Contact</a></li>";
               } else {
                 echo "<li><a href='reserveren-contact.php#contact'>Contact</a></li>";
               }
-            ?>
-            <?php                
+
+              session_start();
+              $aantalItems = 0;
+
+              if (!empty($_SESSION['shoppingCart'])) {
+                foreach($_SESSION['shoppingCart'] as $product) {
+                  $aantalItems = $aantalItems + $product['amount'];
+                }
+              } 
+
               if (file_exists('index.php')) {
                 echo "<li><a href='Pages/shoppingCart.php' class='fa fa-shopping-cart'></a></li>";
               } else {
-                echo "<li><a href='shoppingCart.php' class='fa fa-shopping-cart'></a></li>";
+                echo "<li><a href='shoppingCart.php' class='fa fa-shopping-cart'></a><div class='shoppingCartItems'><p>" . $aantalItems . "</p></div></li>";
               }
             ?>
+            
           </ul>
         </nav>
     </section>

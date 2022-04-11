@@ -158,6 +158,23 @@ nav ul {
   display: flex;
 }
 
+nav ul .shoppingCartItems {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+nav ul .shoppingCartItems p {
+  font-size: 10px;
+}
+
 nav ul li {
   text-align: center;
 }
@@ -231,6 +248,11 @@ label {
   nav ul {
     display: flex;
     flex-direction: column;
+  }
+
+  nav ul .shoppingCartItems {
+    top: 190px;
+    right: 40px;
   }
 
   nav ul li a {
@@ -650,7 +672,11 @@ label {
 }
 
 .containerMenu .priceCart .priceTag {
-  margin: 0 15px 2.5px 15px;
+  margin: 0 20px 2.5px 15px;
+}
+
+.containerMenu .priceCart .inShoppingCartAmount {
+  margin: 0 10px 2.5px 10px;
 }
 
 .containerMenu .priceCart .addToCart {
@@ -666,8 +692,19 @@ label {
   margin-top: 2.5px;
 }
 
-.containerMenu .priceCart .addToCart .fa {
-  margin: 0;
+.containerMenu .priceCart .shoppingCartButton {
+  background-color: #530a0e;
+  cursor: pointer;
+  border: none;
+  color: white;
+  transition: all 1.2s ease 0s;
+  display: flex;
+  margin: none;
+}
+
+.containerMenu .priceCart .addToCart .fa,
+.containerMenu .priceCart .shoppingCartButton .fa {
+  margin-right: 0;
 }
 
 .containerMenu .priceCart .addToCart .fa-plus {
@@ -676,6 +713,10 @@ label {
 
 .containerMenu .priceCart .addToCart i {
   font-size: 25px;
+}
+
+.containerMenu .priceCart .shoppingCartButton i {
+  font-size: 20px;
 }
 
 .containerMenu .priceCart .addToCart:hover,
@@ -812,9 +853,17 @@ label {
 }
 
 .shoppingCartMain .shoppingCartContainer {
-  height: 100%;
+  height: auto;
   width: 90%;
   display: flex;
+}
+
+.shoppingCartMain .emptyCard {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .shoppingCartMain .shoppingCartContainer .shoppingCartItems {
@@ -1213,18 +1262,6 @@ footer .inlogpageButton {
   width: 12.5%;
 }
 
-.adminMain .adminRow table .gerechtPrijs {
-  width: 7.5%;
-}
-
-.adminMain .adminRow table .drankNaam {
-  width: 30%;
-}
-
-.adminMain .adminRow table .drankCatagorie {
-  width: 30%;
-}
-
 .adminMain .adminRow table .drankPrijs {
   width: 20%;
 }
@@ -1234,21 +1271,21 @@ footer .inlogpageButton {
   width: 10%;
 }
 
-.adminMain .adminRow table .datum {
-  width: 15%;
-}
-
+.adminMain .adminRow table .datum,
 .adminMain .adminRow table .naam,
 .adminMain .adminRow table .email,
 .adminMain .adminRow table .onderwerp {
   width: 15%;
 }
 
+.adminMain .adminRow table .gerechtPrijs,
 .adminMain .adminRow table .tijd,
 .adminMain .adminRow table .personen {
   width: 7.5%;
 }
 
+.adminMain .adminRow table .drankNaam,
+.adminMain .adminRow table .drankPrijs,
 .adminMain .adminRow table .bijzonderheden {
   width: 30%;
 }

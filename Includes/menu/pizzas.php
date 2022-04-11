@@ -17,9 +17,11 @@ foreach ($result as $result){
     echo    "</div>";
     echo    "<div class='priceCart'>";
     echo        "<h3 class='priceTag'>€" . $roundendPrice . "</h3>";
-    echo        "<button class='addToCart'>";
-    echo            "<i class='fa fa-plus'></i><i class='fa fa-cart-plus'></i>";
-    echo        "</button>";
+    echo        "<form action='../Pages/shoppingCart.php?id=" . $result['id'] . "&naam=" . $result['gerechtNaam'] . "&beschrijving=" . $result['gerechtBeschrijving'] . "&prijs=" . $roundendPrice . "' method='post'>";   
+    echo            "<button type='submit' name='add_to_cart' class='addToCart'>";
+    echo                "<i class='fa fa-plus'></i><i class='fa fa-cart-plus'></i>";
+    echo            "</button>";
+    echo        "</form>";
     echo    "</div>";
     echo"</div>";
 }

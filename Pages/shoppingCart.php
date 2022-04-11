@@ -14,49 +14,150 @@
     ?>
 
     <main class="shoppingCartMain">
-      <div class="shoppingCartContainer">
-        <div class="shoppingCartItems containerMenu">
-        <?php
-          require_once("../Includes/connector.php");
+      <?php
+        // Add to cart 
+        if (isset($_POST['add_to_cart'])) {
 
-          $sql = "SELECT * FROM gerechten";
-          $stmt = $connect->prepare($sql);
-          $stmt->execute();
-          $result = $stmt->fetchAll();
+          if (isset($_SESSION['shoppingCart'])) {
+          
+            $place = array_search($_GET['id'], array_column($_SESSION['shoppingCart'], 'id'));
+          
+            $exists = false;
 
-          foreach ($result as $result){
+            $amount = $_SESSION['shoppingCart'][$place]['amount'];
 
-              $roundendPrice = sprintf('%0.2f', $result['gerechtPrijs']);
+            foreach($_SESSION['shoppingCart'] as $current) {
+              if ($current['id'] == $_GET['id']) {
+                $amount++;
+                $exists = TRUE;
+              }
+            }
 
-              echo"<div class='gerecht'>";
-              echo    "<div>";
-              echo        "<h3>" . $result['gerechtNaam'] . "</h3>";
-              echo        "<p>" . $result['gerechtBeschrijving'] . "</p>";
-              echo    "</div>";
-              echo    "<div class='priceCart'>";
-              echo        "<h3 class='priceTag'>€" . $roundendPrice . "</h3>";
-              echo        "<button class='addToCart'>";
-              echo            "<i class='fa fa-plus'></i><i class='fa fa-cart-plus'></i>";
-              echo        "</button>";
-              echo    "</div>";
-              echo"</div>";
+            if ($exists == TRUE) {
+
+              $_SESSION['shoppingCart'][$place]['amount'] = $amount;
+              header('Location: ../Pages/shoppingCart.php');
+              
+            } else {
+
+              $count = count($_SESSION['shoppingCart']);
+              $_SESSION['shoppingCart'][$count] = array(
+                      
+                'id' => $_GET['id'],
+                'amount' => 1,
+                'naam' => $_GET['naam'],
+                'beschrijving' => $_GET['beschrijving'],
+                'prijs' => $_GET['prijs'],
+    
+              );
+              header('Location: Location: ../Pages/shoppingCart.php');
+
+            }
+
+          } else {
+
+            $_SESSION['shoppingCart'][0] = array(
+      
+              'id' => $_GET['id'],
+              'amount' => 1,
+              'naam' => $_GET['naam'],
+              'beschrijving' => $_GET['beschrijving'],
+              'prijs' => $_GET['prijs'],
+    
+            );
+            header('Location: ../Pages/shoppingCart.php');
+
           }
-        ?>
-        </div>
-        <div class="shoppingCartPrice">
-          <div class="finishOrder">
-            <h2>Afrekenen:</h2>
-            <div><p>Aantal items:</p><p>3 items</p></div>
-            <div><p>Prijs:</p><p>5 euro</p></div>
-            <div class="streepje"></div>
-            <div><p>Bezorgkosten:</p><p>2.50 euro</p></div>
-            <div><p>BTW:</p><p>21%</p></div>
-            <div class="streepje"></div>
-            <div><p>Totaalprijs:</p><p>10 euro</p></div>
-            <button>Betaal</button>
-          </div>
-        </div>
-      </div>
+
+        }
+
+        // Remove from cart
+        if (isset($_POST['remove_from_cart'])) {
+
+          $place = array_search($_GET['id'], array_column($_SESSION['shoppingCart'], 'id'));
+
+          $amount = $_SESSION['shoppingCart'][$place]['amount'];
+
+          if ($amount > 1) {
+
+            $amount--;
+            $_SESSION['shoppingCart'][$place]['amount'] = $amount;
+            header('Location: ../Pages/shoppingCart.php');
+
+          } else {
+
+            unset($_SESSION['shoppingCart'][$place]);
+            $_SESSION['shoppingCart'] = array_values($_SESSION['shoppingCart']);
+            header('Location: ../Pages/shoppingCart.php');
+
+          }
+        }
+
+        // Display cart
+        if(!empty($_SESSION['shoppingCart'])){
+          echo"<div class='shoppingCartContainer'>";
+            echo"<div class='shoppingCartItems containerMenu'>";
+              foreach($_SESSION['shoppingCart'] as $product) {
+                echo"<div class='gerecht'>";
+                echo    "<div>";
+                echo        "<h3>" . $product['naam'] . "</h3>";
+                echo        "<p>" . $product['beschrijving'] . "</p>";
+                echo    "</div>";
+                echo    "<div class='priceCart'>";
+                echo        "<h3 class='priceTag'>€" . $product['prijs'] . "</h3>";
+                echo        "<form action='../Pages/shoppingCart.php?id=" . $product['id'] . "' method='post'>";   
+                echo            "<button type='submit' name='remove_from_cart' class='shoppingCartButton'>";
+                echo                "<i class='fa fa-minus'></i>";
+                echo            "</button>";
+                echo        "</form>";
+                echo        "<h3 class='inShoppingCartAmount'>" . $product['amount'] . "x</h3>";
+                echo        "<form action='../Pages/shoppingCart.php?id=" . $product['id'] . "' method='post'>";   
+                echo            "<button type='submit' name='add_to_cart' class='shoppingCartButton'>";
+                echo                "<i class='fa fa-plus'></i>";
+                echo            "</button>";
+                echo        "</form>";
+                echo    "</div>";
+                echo"</div>";
+              }
+
+            // Afrekenen!
+            $aantalItems = 0;
+            $prijs = 0.0;
+
+            foreach($_SESSION['shoppingCart'] as $product) {
+              $aantalItems = $aantalItems + $product['amount'];
+
+              $prijs = $prijs + ($product['prijs'] * $product['amount']);
+            }
+
+            $totaalPrijs = $prijs * 1.21 + 2.50;
+            
+            $prijsAfgerond = sprintf('%0.2f', $prijs);
+            $totaalPrijsAfgerond = sprintf('%0.2f', $totaalPrijs);
+
+            echo"</div>";
+            echo"<div class='shoppingCartPrice'>";
+              echo"<div class='finishOrder'>";
+                echo"<h2>Afrekenen:</h2>";
+                echo"<div><p>Aantal items:</p><p>" . $aantalItems . " items</p></div>";
+                echo"<div><p>Prijs:</p><p>€" . $prijsAfgerond . "</p></div>";
+                echo"<div class='streepje'></div>";
+                echo"<div><p>Bezorgkosten:</p><p>2.50 euro</p></div>";
+                echo"<div><p>BTW:</p><p>21%</p></div>";
+                echo"<div class='streepje'></div>";
+                echo"<div><p>Totaalprijs:</p><p>€" . $totaalPrijsAfgerond . "</p></div>";
+                echo"<button>Betaal</button>";
+              echo"</div>";
+            echo"</div>";
+          echo"</div>";
+
+        // Winkelmandje is leeg  
+        } else {
+          echo"<div class='emptyCard'>";
+          echo  "<h2>Uw winkelmandje is leeg!</h2>";
+          echo"</div>";
+        }
+      ?>
     </main>
 
     <?php

@@ -20,29 +20,33 @@
           <div class="row sectionRow reverseRow">
             <div class="column">
               <div class="contact-reserveren">
-                <h2 class="titel">Reservatie formulier</h2>
-                <form class="reserveren-form">
+                <?php if(isset($_GET['reserveringError'])) { ?>
+                  <h2 style="color: red;" class="titel"><?php echo $_GET['reserveringError']; ?></h2> 
+                <?php } else { ?>
+                  <h2 class="titel"><?php echo "Reservatie formulier"; ?></h2>
+                <?php } ?>
+                <form class="reserveren-form formulier" action="../PHP/reservering.php" method="post">
                   <div class="naam-email">
                     <div class="form-element">
-                      <input type="text" class="form-input" placeholder="Volledige naam" />
+                      <input type="text" class="form-input inputForm" placeholder="Volledige naam" name="name"/>
                     </div>
 
                     <div class="form-element">
-                      <input type="email" class="form-input" placeholder="E-mailadres" />
+                      <input type="email" class="form-input inputForm" placeholder="E-mailadres" name="email"/>
                     </div>
                   </div>
 
                   <div class="datum-tijd">
                     <div class="personen-tijd form-element ">
-                      <input type="Number" max="12" class="form-input" placeholder="Personen" />
+                      <input type="Number" max="12" class="form-input inputForm" placeholder="Personen" name="personen"/>
                     </div>
 
                     <div class="datum form-element ">
-                      <input id="datumForm" type="Date" class="form-input" placeholder="Datum" />
+                      <input id="datumForm" type="Date" class="form-input inputForm" placeholder="Datum" name="datum"/>
                     </div>
 
                     <div class="personen-tijd form-element ">
-                      <select class="form-input">
+                      <select class="form-input" name="tijd">
                         <option value="16:00">16:00</option>
                         <option value="16:30">16:30</option>
                         <option value="17:00">17:00</option>
@@ -68,11 +72,12 @@
                       class="form-input"
                       rows="5"
                       placeholder="Bijzonderheden"
+                      name="bijzonderheden"
                     ></textarea>
                   </div>
 
                   <div class="form-submit">
-                    <input type="submit" class="submit-button" />
+                    <input type="submit" class="submit-button" name="reserveringSubmit"/>
                   </div>
                 </form>
               </div>
@@ -101,33 +106,38 @@
             </div>
             <div class="column">
               <div class="contact-reserveren">
-                <h2 class="titel">Contact formulier</h2>
-                <form class="contact-form">
+                <?php if(isset($_GET['contactError'])) { ?>
+                  <h2 style="color: red;" class="titel"><?php echo $_GET['contactError']; ?></h2> 
+                <?php } else { ?>
+                  <h2 class="titel"><?php echo "Contact formulier"; ?></h2>
+                <?php } ?>
+                <form class="contact-form formulier2" action="../PHP/contact.php" method="post">
                   <div class="naam-email">
                     <div class="form-element">
-                      <input type="text" class="form-input" placeholder="Volledige naam" />
+                      <input type="text" class="form-input inputForm" placeholder="Volledige naam" name="name"/>
                     </div>
 
                     <div class="form-element">
-                      <input type="email" class="form-input" placeholder="E-mailadres" />
+                      <input type="email" class="form-input inputForm" placeholder="E-mailadres" name="email"/>
                     </div>
                   </div>
 
                   <div class="form-element">
-                    <input type="text" class="form-input" placeholder="Onderwerp" />
+                    <input type="text" class="form-input inputForm" placeholder="Onderwerp" name="onderwerp"/>
                   </div>
 
                   <div class="form-element">
                     <textarea
                       style="height: 154px"
-                      class="form-input"
+                      class="form-input inputForm"
                       rows="5"
                       placeholder="Bericht"
+                      name="bericht"
                     ></textarea>
                   </div>
 
                   <div class="form-submit">
-                    <input type="submit" class="submit-button" />
+                    <input type="submit" class="submit-button" name="contactSubmit"/>
                   </div>
                 </form>
               </div>

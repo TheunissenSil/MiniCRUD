@@ -50,13 +50,15 @@
         <div id="pizzaMenu">
           <h2 class="menuTitel subTitel">Pizza's</h2>
           <?php 
-            include('../Includes/menu/pizzas.php');
+            $category = "Pizzas";
+            include('../Includes/menu/gerechten.php');
           ?>
         </div>
         <div id="pastaMenu">
           <h2 class="menuTitel subTitel">Pasta's</h2>
           <?php 
-            include('../Includes/menu/pastas.php');
+            $category = "Pastas";
+            include('../Includes/menu/gerechten.php');
           ?>
         </div>
         <div id="drankMenu">
@@ -68,7 +70,8 @@
               </div>
               <div class="drankjes">
                 <?php 
-                  include('../Includes/menu/frisdranken.php');
+                  $category = "frisdranken";
+                  include('../Includes/menu/drankjes.php');
                 ?>
               </div>
             </div>
@@ -78,7 +81,8 @@
               </div>
               <div class="drankjes">
                 <?php 
-                  include('../Includes/menu/warmeDranken.php');
+                  $category = "Warme Dranken";
+                  include('../Includes/menu/drankjes.php');
                 ?>
               </div>
             </div>
@@ -90,7 +94,8 @@
               </div>
               <div class="drankjes">
                 <?php 
-                  include('../Includes/menu/wijnKaart.php');
+                  $category = "Wijnkaart";
+                  include('../Includes/menu/drankjes.php');
                 ?>
               </div>
             </div>
@@ -100,7 +105,8 @@
               </div>
               <div class="drankjes">
                 <?php 
-                  include('../Includes/menu/Bierkaart.php');
+                  $category = "Bierkaart";
+                  include('../Includes/menu/drankjes.php');
                 ?>
               </div>
             </div>

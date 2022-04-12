@@ -153,7 +153,11 @@
             echo"</div>";
           echo"</div>";
 
-        // Winkelmandje is leeg  
+        // Winkelmandje is leeg of bestelling is geplaatst
+        } else if (isset($_GET['error'])) {
+          echo"<div class='emptyCard'>";
+          echo  "<h2>Bedankt voor uw bestelling!</h2>";
+          echo"</div>";
         } else {
           echo"<div class='emptyCard'>";
           echo  "<h2>Uw winkelmandje is leeg!</h2>";

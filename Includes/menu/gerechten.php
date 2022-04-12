@@ -1,8 +1,9 @@
 <?php
 require_once("../Includes/connector.php");
 
-$sql = "SELECT * FROM gerechten WHERE category = 'Pizzas'";
+$sql = "SELECT * FROM gerechten WHERE category = :category";
 $stmt = $connect->prepare($sql);
+$stmt->bindParam(':category', $category);
 $stmt->execute();
 $result = $stmt->fetchAll();
 

@@ -86,7 +86,7 @@
                 // Niks gevonden
                 if ($gerechtenSearch === false and $drankejesSearch === false) {
                     echo"<div class='niksGevonden'>";
-                    echo    "<h2>We hebben helaas niks kunnen vinden op " . $_GET['searchInput'] . ".</h2>";
+                    echo    "<h2>We hebben helaas niks kunnen vinden bij voorgerechten op " . $_GET['searchInput'] . ".</h2>";
                     echo    "<h3>Probeer op een naam beschrijving of catogorie te zoeken.</h3>";
                     echo"</div>";
                 }

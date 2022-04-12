@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="CSS/style.css" />
     <title>MiniCRUD</title>
   </head>
-  <body>
+  <body> 
     <?php
       include('Includes/header.php');
     ?>

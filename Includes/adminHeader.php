@@ -8,14 +8,12 @@
           }
         ?>
 
-        <h2>Medewerkers Paneel</h2>
-
         <label for="toggle-1" class="toggle-menu"
           ><ul>
             <li></li>
             <li></li>
-            <li></li></ul
-        ></label>
+            <li></li></ul>
+          </label>
 
         <input type="checkbox" id="toggle-1" />
 
@@ -24,6 +22,7 @@
             <li><a href='home.php'>Home</a></li>
             <li><a href='changeMenu.php'>Menukaart aanpassen</a></li>
             <li><a href='adminReserveringen-contact.php'>Reserveringen / Contact berichten</a></li>
+            <li><a href='bestellingen.php'>Bestellingen</a></li>
             <li><a href='../PHP/logout.php'>Uitloggen</a></li>
           </ul>
         </nav>

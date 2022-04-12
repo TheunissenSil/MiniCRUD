@@ -68,7 +68,7 @@
               } 
 
               if (file_exists('index.php')) {
-                echo "<li><a href='Pages/shoppingCart.php' class='fa fa-shopping-cart'></a></li>";
+                echo "<li><a href='Pages/shoppingCart.php' class='fa fa-shopping-cart'></a><div class='shoppingCartItems'><p>" . $aantalItems . "</p></div></li>";
               } else {
                 echo "<li><a href='shoppingCart.php' class='fa fa-shopping-cart'></a><div class='shoppingCartItems'><p>" . $aantalItems . "</p></div></li>";
               }

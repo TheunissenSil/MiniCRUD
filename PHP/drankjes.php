@@ -16,6 +16,10 @@ if(isset($_POST['drankjesSubmit'])) {
         $sql = "UPDATE drankjes SET drankNaam = :drankjesNaam, drankPrijs = :drankjesPrijs, category = :category WHERE  id = :id";
 
         $stmt = $connect->prepare($sql);
+        $stmt->bindParam(':id', $_GET['id']);
+        $stmt->bindParam(':drankjesNaam', $_POST['drankjesNaam']);
+        $stmt->bindParam(':drankjesPrijs', $_POST['drankjesPrijs']);
+        $stmt->bindParam(':category', $_POST['drankjesCategory'])
         $stmt->execute($data);
 
         header ("Location: ../AdminPages/changeMenuForm.php?error=Het drankje is veranderd op de menukaart!#drankjesForm");

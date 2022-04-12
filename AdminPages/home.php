@@ -44,7 +44,7 @@ include_once("../Includes/session.php")
                     <input class="inputForm" placeholder="Uw password....." type="Password" name="password">
                     <h3>Confrim Password</h3>
                     <input class="inputForm" placeholder="Confirm password....." type="Password" name="confirmPassword">
-                    <input type="submit" value="Registreren" class="submitadminForm">
+                    <input name="registerSubmit" type="submit" value="Registreren" class="submitadminForm">
                 </form>
             </div>
         </div>

@@ -46,11 +46,11 @@
                 'id' => $_GET['id'],
                 'amount' => 1,
                 'naam' => $_GET['naam'],
-                'beschrijving' => $_GET['beschrijving'],
                 'prijs' => $_GET['prijs'],
+                'category' => $_GET['category'],
     
               );
-              header('Location: Location: ../Pages/shoppingCart.php');
+              header('Location: ../Pages/menu.php');
 
             }
 
@@ -61,11 +61,11 @@
               'id' => $_GET['id'],
               'amount' => 1,
               'naam' => $_GET['naam'],
-              'beschrijving' => $_GET['beschrijving'],
               'prijs' => $_GET['prijs'],
+              'category' => $_GET['category'],
     
             );
-            header('Location: ../Pages/shoppingCart.php');
+            header('Location: ../Pages/menu.php');
 
           }
 
@@ -101,7 +101,7 @@
                 echo"<div class='gerecht'>";
                 echo    "<div>";
                 echo        "<h3>" . $product['naam'] . "</h3>";
-                echo        "<p>" . $product['beschrijving'] . "</p>";
+                echo        "<p>" . $product['category'] . "</p>";
                 echo    "</div>";
                 echo    "<div class='priceCart'>";
                 echo        "<h3 class='priceTag'>€" . $product['prijs'] . "</h3>";
@@ -146,7 +146,9 @@
                 echo"<div><p>BTW:</p><p>21%</p></div>";
                 echo"<div class='streepje'></div>";
                 echo"<div><p>Totaalprijs:</p><p>€" . $totaalPrijsAfgerond . "</p></div>";
-                echo"<button>Betaal</button>";
+                echo"<form action='../PHP/checkout.php' method='post'>";
+                echo  "<button type='submit' name='checkoutBtn'>Betaal</button>";
+                echo"</form>";
               echo"</div>";
             echo"</div>";
           echo"</div>";

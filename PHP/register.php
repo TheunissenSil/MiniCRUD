@@ -1,4 +1,5 @@
 <?php
+if (isset($_POST['registerSubmit'])) {
 
 	require_once('../Includes/connector.php');
 
@@ -26,15 +27,16 @@
     
     $password = password_hash($password, PASSWORD_DEFAULT);
 
-    $data = [
-        ':email' => $email,
-        ':username' => $username,
-        ':password' => $password,
-    ];
-    
     $sql = "INSERT INTO users(email, user_name, password) VALUES(:email, :username, :password)";
 
     $stmt = $connect->prepare($sql);
-    $stmt->execute($data);
+    $stmt->bindParam(':email', $email);
+    $stmt->bindParam(':username', $username);
+    $stmt->bindParam(':password', $password);
+    $stmt->execute();
 
     header ("Location: ../AdminPages/home.php?error=Your account has been registered");
+
+} else {
+    header('Location: ../AdminPages/home.php');
+}

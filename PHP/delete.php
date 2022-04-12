@@ -12,6 +12,8 @@ if(isset($_GET['id'])) {
 
     if ($dataTable === "reserveringen" ||  $dataTable === "contact") {
         header ("Location: ../AdminPages/adminReserveringen-contact.php");
+    } else if ($dataTable === "bestellingen") {
+        header ("Location: ../AdminPages/bestellingen.php");
     } else {
         header ("Location: ../AdminPages/changeMenu.php");
     }

@@ -113,12 +113,6 @@ header {
   }
 }
 
-@media only screen and (max-width: 550px) {
-  #logo h2 {
-    display: none;
-  }
-}
-
 /* Typing effect */
 @keyframes typing {
   from {
@@ -267,6 +261,13 @@ label {
     padding-right: 13px;
   }
 }
+
+@media only screen and (max-width: 1300px) {
+  .adminHeader h2 {
+    display: none;
+  }
+}
+
 /* ------------- */
 /* landingPage */
 #start {

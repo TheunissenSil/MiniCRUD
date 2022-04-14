@@ -37,7 +37,7 @@ include_once("../Includes/session.php")
             <th class="gerechtDelete">Verwijderen</th>
           </tr>
           <?php
-            include('../Includes/bestellingenBerichten.php')
+            include('../Includes/bestellingen.php')
           ?>
         </table>
       </div>

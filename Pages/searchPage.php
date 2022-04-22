@@ -1,3 +1,9 @@
+<?php
+if (!isset($_GET['searchInput'])) {
+    header("Location: ../index.php");
+} 
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -45,9 +51,11 @@
                     echo    "</div>";
                     echo    "<div class='priceCart'>";
                     echo        "<h3 class='priceTag'>€" . $roundendPrice . "</h3>";
-                    echo        "<button class='addToCart'>";
-                    echo            "<i class='fa fa-plus'></i><i class='fa fa-cart-plus'></i>";
-                    echo        "</button>";
+                    echo        "<form action='../Pages/shoppingCart.php?id=" . $result['id'] . "&naam=" . $result['gerechtNaam'] . "&prijs=" . $roundendPrice . "&category=" . $result['category'] . "' method='post'>";   
+                    echo            "<button type='submit' name='add_to_cart' class='addToCart'>";
+                    echo                "<i class='fa fa-plus'></i><i class='fa fa-cart-plus'></i>";
+                    echo            "</button>";
+                    echo        "</form>";
                     echo    "</div>";
                     echo"</div>";
                 }
@@ -76,9 +84,11 @@
                     echo    "</div>";
                     echo    "<div class='priceCart'>";
                     echo        "<h3 class='priceTag'>€" . $roundendPrice . "</h3>";
-                    echo        "<button class='addToCart'>";
-                    echo            "<i class='fa fa-plus'></i><i class='fa fa-cart-plus'></i>";
-                    echo        "</button>";
+                    echo        "<form action='../Pages/shoppingCart.php?id=" . $result['id'] . "&naam=" . $result['gerechtNaam'] . "&prijs=" . $roundendPrice . "&category=" . $result['category'] . "' method='post'>";   
+                    echo            "<button type='submit' name='add_to_cart' class='addToCart'>";
+                    echo                "<i class='fa fa-plus'></i><i class='fa fa-cart-plus'></i>";
+                    echo            "</button>";
+                    echo        "</form>";
                     echo    "</div>";
                     echo"</div>";
                 }
